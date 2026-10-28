@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ============================================================ -->
+        <!-- Module category                                               -->
+        <!-- ============================================================ -->
+        <record id="module_category_smart_audit" model="ir.module.category">
+            <field name="name">Internal Audit</field>
+            <field name="description">Role-based access for the Internal Audit function.</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <!-- ============================================================ -->
+        <!-- Privilege + Groups (Odoo 19)                                  -->
+        <!-- The chain: auditor -> senior -> manager -> CAE                  -->
+        <!-- Auditee is a separate, portal-only role.                      -->
+        <!-- ============================================================ -->
+        <record id="res_groups_privilege_smart_audit" model="res.groups.privilege">
+            <field name="name">Internal Audit</field>
+            <field name="category_id" ref="module_category_smart_audit"/>
+        </record>
+
+        <record id="group_audit_auditee" model="res.groups">
+            <field name="name">Auditee (Portal)</field>
+            <field name="privilege_id" ref="res_groups_privilege_smart_audit"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_portal'))]"/>
+        </record>
+
+        <record id="group_audit_auditor" model="res.groups">
+            <field name="name">Auditor</field>
+            <field name="privilege_id" ref="res_groups_privilege_smart_audit"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_audit_senior_auditor" model="res.groups">
+            <field name="name">Senior Auditor</field>
+            <field name="privilege_id" ref="res_groups_privilege_smart_audit"/>
+            <field name="implied_ids" eval="[(4, ref('group_audit_auditor'))]"/>
+        </record>
+
+        <record id="group_audit_manager" model="res.groups">
+            <field name="name">Audit Manager</field>
+            <field name="privilege_id" ref="res_groups_privilege_smart_audit"/>
+            <field name="implied_ids" eval="[(4, ref('group_audit_senior_auditor'))]"/>
+        </record>
+
+        <record id="group_audit_cae" model="res.groups">
+            <field name="name">Chief Audit Executive</field>
+            <field name="privilege_id" ref="res_groups_privilege_smart_audit"/>
+            <field name="implied_ids" eval="[(4, ref('group_audit_manager'))]"/>
+        </record>
+
+    </data>
+</odoo>

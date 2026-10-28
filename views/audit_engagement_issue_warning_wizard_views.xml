@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_audit_engagement_issue_warning_wizard_form" model="ir.ui.view">
+            <field name="name">audit.engagement.issue.warning.wizard.form</field>
+            <field name="model">audit.engagement.issue.warning.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Issue Report Warning" class="o_auditflow_form">
+                    <field name="engagement_id" invisible="1"/>
+                    <div class="o_auditflow_warning_banner" role="alert">
+                        <p class="mb-2"><strong class="d-block o_form_label">This audit operation is not ready to issue.</strong></p>
+                        <p class="mb-0 o_form_label">Review the readiness details below. You can cancel, or use Force Issue Anyway to override the checks.</p>
+                    </div>
+                    <field name="message" nolabel="1" placeholder="Readiness details..."/>
+                    <footer>
+                        <button name="action_force_issue" type="object" string="Force Issue Anyway" class="btn-primary" data-hotkey="q"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

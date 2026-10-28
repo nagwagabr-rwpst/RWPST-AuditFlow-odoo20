@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_audit_finding_list" model="ir.ui.view">
+            <field name="name">audit.finding.list</field>
+            <field name="model">audit.finding</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <list string="Review Results"
+                      class="o_auditflow_list"
+                      default_order="due_date desc, id desc"
+                      decoration-success="status in ('closed','done')"
+                      decoration-muted="status == 'cancelled'"
+                      decoration-danger="is_overdue"
+                      decoration-warning="is_due_soon and not is_overdue">
+                    <field name="name"/>
+                    <field name="severity" widget="badge"
+                           decoration-danger="severity == 'critical'"
+                           decoration-warning="severity == 'high'"
+                           decoration-info="severity == 'medium'"
+                           decoration-muted="severity == 'low'"/>
+                    <field name="status" widget="badge"
+                           decoration-info="status == 'open'"
+                           decoration-warning="status == 'in_review'"
+                           decoration-success="status in ('closed', 'done')"
+                           decoration-muted="status == 'cancelled'"/>
+                    <field name="owner_id"/>
+                    <field name="due_date"/>
+                    <field name="risk_rating" optional="show"/>
+                    <field name="is_overdue" invisible="1"/>
+                    <field name="is_due_soon" invisible="1"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_audit_finding_search" model="ir.ui.view">
+            <field name="name">audit.finding.search</field>
+            <field name="model">audit.finding</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="engagement_id"/>
+                    <field name="severity"/>
+                    <field name="status"/>
+                    <filter string="Delayed"
+                            name="filter_overdue"
+                            domain="[('is_overdue', '=', True)]"/>
+                    <filter string="Due Soon"
+                            name="filter_due_soon"
+                            domain="[('is_due_soon', '=', True)]"/>
+                    <filter string="High risk review results"
+                            name="filter_critical_findings"
+                            domain="[('severity', '=', 'critical')]"/>
+                    <filter string="High risk (rating)"
+                            name="filter_risk_high"
+                            domain="[('risk_rating', 'in', ('high', 'critical'))]"/>
+                    <separator/>
+                    <filter string="Group by audit operation"
+                            name="group_by_engagement"
+                            context="{'group_by': 'engagement_id'}"/>
+                    <filter string="Group by Severity"
+                            name="group_by_severity"
+                            context="{'group_by': 'severity'}"/>
+                    <filter string="Group by Execution Status"
+                            name="group_by_status"
+                            context="{'group_by': 'status'}"/>
+                    <filter string="Group by Risk"
+                            name="group_by_risk"
+                            context="{'group_by': 'risk_rating'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_audit_finding_form" model="ir.ui.view">
+            <field name="name">audit.finding.form</field>
+            <field name="model">audit.finding</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form class="o_auditflow_form">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object"
+                                    name="action_view_corrective_actions"
+                                    class="oe_stat_button"
+                                    icon="fa-wrench">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="corrective_action_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Corrective Actions (CAPA)</span>
+                                </div>
+                            </button>
+                            <button type="object"
+                                    name="action_view_overdue_corrective_actions"
+                                    class="oe_stat_button"
+                                    icon="fa-exclamation-triangle">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="overdue_action_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Delayed actions</span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" string="Review Result"/>
+                            <h1>
+                                <field name="name" placeholder="e.g. Missing approval on journal entries"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="engagement_id"
+                                       options="{'no_create': True}"
+                                       invisible="context.get('default_engagement_id', False) != False"/>
+                                <field name="severity" widget="badge"
+                                       decoration-danger="severity == 'critical'"
+                                       decoration-warning="severity == 'high'"
+                                       decoration-info="severity == 'medium'"
+                                       decoration-muted="severity == 'low'"/>
+                                <field name="status" widget="badge"
+                                       decoration-info="status == 'open'"
+                                       decoration-warning="status == 'in_review'"
+                                       decoration-success="status in ('closed', 'done')"
+                                       decoration-muted="status == 'cancelled'"/>
+                            </group>
+                            <group>
+                                <field name="owner_id"/>
+                                <field name="due_date"/>
+                                <field name="is_overdue" invisible="1"/>
+                                <field name="is_due_soon" invisible="1"/>
+                            </group>
+                        </group>
+                        <group string="Inherent risk">
+                            <field name="risk_impact"/>
+                            <field name="risk_likelihood"/>
+                            <field name="risk_rating" readonly="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Action plan &amp; response" name="action_response">
+                                <group>
+                                    <field name="action_plan" placeholder="Planned remediation..."/>
+                                    <field name="target_date"/>
+                                    <field name="responsible_id"/>
+                                </group>
+                                <group string="Management response">
+                                    <field name="management_response" nolabel="1"
+                                           placeholder="Management response to this review result..."/>
+                                </group>
+                            </page>
+                            <page string="Description" name="description">
+                                <field name="description" nolabel="1"
+                                       placeholder="Describe the review result..."/>
+                            </page>
+                            <page string="Root Cause &amp; Impact" name="root_cause_impact">
+                                <group>
+                                    <field name="root_cause" nolabel="1"
+                                           placeholder="Root cause analysis..."/>
+                                </group>
+                                <group>
+                                    <field name="impact" nolabel="1"
+                                           placeholder="Business impact..."/>
+                                </group>
+                            </page>
+                            <page string="Recommendation" name="recommendation">
+                                <field name="recommendation" nolabel="1"
+                                       placeholder="Recommended corrective action..."/>
+                            </page>
+                            <page string="Evidence" name="evidence">
+                                <field name="attachment_ids" widget="many2many_binary"/>
+                            </page>
+                            <page string="Corrective Actions (CAPA)" name="corrective_actions">
+                                <field name="corrective_action_ids">
+                                    <list editable="bottom"
+                                          class="o_auditflow_list"
+                                          default_order="target_date asc, id desc"
+                                          decoration-danger="is_overdue"
+                                          decoration-success="state == 'done'"
+                                          decoration-warning="state == 'in_progress'">
+                                        <field name="name"/>
+                                        <field name="state" widget="badge"
+                                               decoration-danger="is_overdue and state not in ('done', 'cancelled')"
+                                               decoration-muted="state in ('draft', 'cancelled')"
+                                               decoration-info="state == 'assigned'"
+                                               decoration-warning="state == 'in_progress'"
+                                               decoration-success="state == 'done'"/>
+                                        <field name="action_owner_id" widget="many2one_avatar"/>
+                                        <field name="target_date"/>
+                                        <field name="is_overdue" optional="show"/>
+                                        <field name="priority" optional="show"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_audit_finding" model="ir.actions.act_window">
+            <field name="name">All Review Results</field>
+            <field name="res_model">audit.finding</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_audit_finding_search"/>
+        </record>
+
+        <menuitem id="menu_audit_findings_all"
+                  name="All Review Results"
+                  parent="menu_smart_audit_section_findings"
+                  action="action_audit_finding"
+                  sequence="5"/>
+
+    </data>
+</odoo>

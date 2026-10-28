@@ -1,0 +1,11 @@
+/* Printed audit operation report. Scoped to the template wrapper. */
+
+.o_auditflow_report h2,
+.o_auditflow_report h3 {
+    color: #0f172a;
+}
+
+.o_auditflow_report table thead th {
+    background: #0f172a;
+    color: #ffffff;
+}

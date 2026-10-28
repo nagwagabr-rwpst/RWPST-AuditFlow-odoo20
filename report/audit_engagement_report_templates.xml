@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_audit_engagement_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page o_auditflow_report">
+                        <h2>Audit operation</h2>
+                        <p><strong>Reference:</strong> <span t-field="o.name"/></p>
+                        <p><strong>Execution status:</strong> <span t-field="o.state"/></p>
+                        <p><strong>Company:</strong> <span t-field="o.company_id"/></p>
+                        <p t-if="o.auditee_id"><strong>Entity under review:</strong> <span t-field="o.auditee_id"/></p>
+                        <p t-if="o.lead_auditor_id"><strong>Lead reviewer:</strong> <span t-field="o.lead_auditor_id"/></p>
+                        <p t-if="o.auditor_ids"><strong>Audit team:</strong>
+                            <span t-esc="', '.join(o.auditor_ids.mapped('name'))"/>
+                        </p>
+                        <p t-if="o.start_date"><strong>Start:</strong> <span t-field="o.start_date"/>
+                            <strong> End:</strong> <span t-field="o.end_date"/>
+                        </p>
+                        <h3>Scope</h3>
+                        <p t-field="o.scope"/>
+                        <h3>Objectives</h3>
+                        <p t-field="o.objectives"/>
+                        <h3>Review Results</h3>
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Review result</th>
+                                    <th>Severity</th>
+                                    <th>Execution status</th>
+                                    <th>Risk</th>
+                                    <th>Target execution</th>
+                                    <th>Delayed</th>
+                                    <th>Action plan</th>
+                                    <th>Target</th>
+                                    <th>Corrective action owner</th>
+                                    <th>Mgmt response</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.finding_ids" t-as="f">
+                                    <tr>
+                                        <td><span t-field="f.name"/></td>
+                                        <td><span t-field="f.severity"/></td>
+                                        <td><span t-field="f.status"/></td>
+                                        <td><span t-field="f.risk_rating"/></td>
+                                        <td><span t-field="f.due_date"/></td>
+                                        <td><t t-esc="f.is_overdue and 'Y' or 'N'"/></td>
+                                        <td><span t-field="f.action_plan" t-options="{'widget': 'text'}"/></td>
+                                        <td><span t-field="f.target_date"/></td>
+                                        <td><span t-field="f.responsible_id"/></td>
+                                        <td><span t-field="f.management_response" t-options="{'widget': 'text'}"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

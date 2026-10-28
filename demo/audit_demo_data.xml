@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="demo_audit_partner_procurement" model="res.partner">
+            <field name="name">Procurement &amp; Contracts</field>
+            <field name="company_type">company</field>
+        </record>
+        <record id="demo_audit_partner_treasury" model="res.partner">
+            <field name="name">Treasury &amp; Payments</field>
+            <field name="company_type">company</field>
+        </record>
+        <record id="demo_audit_partner_hr" model="res.partner">
+            <field name="name">Human Resources</field>
+            <field name="company_type">company</field>
+        </record>
+        <record id="demo_audit_partner_it" model="res.partner">
+            <field name="name">Information Technology</field>
+            <field name="company_type">company</field>
+        </record>
+        <record id="demo_audit_partner_warehouse" model="res.partner">
+            <field name="name">Warehousing &amp; Logistics</field>
+            <field name="company_type">company</field>
+        </record>
+
+        <record id="demo_audit_engagement_procurement" model="audit.engagement">
+            <field name="name">Procurement-to-pay cycle — 2025/10</field>
+            <field name="auditee_id" ref="demo_audit_partner_procurement"/>
+            <field name="lead_auditor_id" ref="base.user_admin"/>
+            <field name="auditor_ids" eval="[(6, 0, [ref('base.user_admin')])]"/>
+            <field name="start_date">2025-10-01</field>
+            <field name="end_date">2026-04-30</field>
+            <field name="state">reporting</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="scope">The review covers vendor selection, purchase order issuance, goods receipt, and invoice approval in line with policy and segregation of duties.</field>
+            <field name="objectives">Verify that documentation is complete, delegation is valid, and receipt matches the purchase order before payment.</field>
+        </record>
+        <record id="demo_audit_engagement_payments" model="audit.engagement">
+            <field name="name">Disbursements &amp; expenses — 2025/11</field>
+            <field name="auditee_id" ref="demo_audit_partner_treasury"/>
+            <field name="lead_auditor_id" ref="base.user_admin"/>
+            <field name="auditor_ids" eval="[(6, 0, [ref('base.user_admin')])]"/>
+            <field name="start_date">2025-11-15</field>
+            <field name="end_date">2026-05-31</field>
+            <field name="state">fieldwork</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="scope">The review matches payments to supporting documents: purchase order, proof of receipt, delegation, and prior approvals.</field>
+            <field name="objectives">Identify payments completed without a full three-way match and test the effectiveness of authorization and review of due transfers.</field>
+        </record>
+        <record id="demo_audit_engagement_hr" model="audit.engagement">
+            <field name="name">Human resources — 2025/08</field>
+            <field name="auditee_id" ref="demo_audit_partner_hr"/>
+            <field name="lead_auditor_id" ref="base.user_admin"/>
+            <field name="auditor_ids" eval="[(6, 0, [ref('base.user_admin')])]"/>
+            <field name="start_date">2025-08-01</field>
+            <field name="end_date">2026-02-28</field>
+            <field name="state">issued</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="scope">Sample hiring, attendance, offboarding, and system access linked to employee records.</field>
+            <field name="objectives">Ensure software entitlements are removed on exit and that salary and allowance changes are supported by a clear delegation of authority.</field>
+        </record>
+        <record id="demo_audit_engagement_itaccess" model="audit.engagement">
+            <field name="name">IT access rights — 2026/01</field>
+            <field name="auditee_id" ref="demo_audit_partner_it"/>
+            <field name="lead_auditor_id" ref="base.user_admin"/>
+            <field name="auditor_ids" eval="[(6, 0, [ref('base.user_admin')])]"/>
+            <field name="start_date">2026-01-10</field>
+            <field name="end_date">2026-06-30</field>
+            <field name="state">draft</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="scope">Compare user entitlements in critical systems to the approved access matrix, including the impact of organizational change.</field>
+            <field name="objectives">Confirm that periodic review exists and that every access change has a documented request and revocation path.</field>
+        </record>
+        <record id="demo_audit_engagement_inventory" model="audit.engagement">
+            <field name="name">Inventory &amp; warehousing — 2025/05</field>
+            <field name="auditee_id" ref="demo_audit_partner_warehouse"/>
+            <field name="lead_auditor_id" ref="base.user_admin"/>
+            <field name="auditor_ids" eval="[(6, 0, [ref('base.user_admin')])]"/>
+            <field name="start_date">2025-05-01</field>
+            <field name="end_date">2025-12-20</field>
+            <field name="state">closed</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="scope">Inventory counts, receipt and issue movements, adjustments, and link to financial postings.</field>
+            <field name="objectives">Reduce stock variances and strengthen approval of count differences.</field>
+        </record>
+
+        <!-- HERO CASE: Payment Control Failure — Audit Module Demo -->
+
+        <record id="demo_audit_finding_eg1_doc_po" model="audit.finding">
+            <field name="name">Control breakdown: incomplete PO documentation</field>
+            <field name="engagement_id" ref="demo_audit_engagement_procurement"/>
+            <field name="description">Hero Case CF-001: Purchase orders were approved while receipt evidence and technical sign-off were incomplete. This created the first weak point in the payment control chain.</field>
+            <field name="severity">high</field>
+            <field name="status">open</field>
+            <field name="owner_id" ref="base.user_admin"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="due_date">2025-07-15</field>
+            <field name="root_cause">Mandatory verification controls were not enforced before moving purchase documents toward payment approval.</field>
+            <field name="impact">Incomplete documentation exposed the company to unsupported payments and weakened audit evidence for procurement approvals.</field>
+            <field name="recommendation">Enforce mandatory receipt evidence, technical sign-off, and PO completeness before any invoice can move to payment review.</field>
+            <field name="action_plan">Update the procurement workflow to block payment progression unless PO, receipt evidence, and technical approval are complete.</field>
+            <field name="target_date">2025-09-30</field>
+            <field name="management_response">Management acknowledged the documentation gap but delayed implementation pending coordination with Finance.</field>
+            <field name="risk_impact">high</field>
+            <field name="risk_likelihood">medium</field>
+        </record>
+
+        <record id="demo_audit_finding_eg2_payment" model="audit.finding">
+            <field name="name">Critical payment released without full three-way match</field>
+            <field name="engagement_id" ref="demo_audit_engagement_payments"/>
+            <field name="description">Hero Case CF-001: A payment was released although the purchase order, receipt confirmation, and invoice validation were not fully aligned. Similar exceptions were observed across more than one payment sample, indicating a control pattern rather than an isolated case.</field>
+            <field name="severity">critical</field>
+            <field name="status">open</field>
+            <field name="owner_id" ref="base.user_admin"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="due_date">2025-06-30</field>
+            <field name="root_cause">The system allowed payment processing without enforcing a complete three-way match between PO, goods receipt, and invoice approval.</field>
+            <field name="impact">Confirmed payments were executed without full validation, exposing the company to financial leakage, duplicate payment risk, and audit non-compliance.</field>
+            <field name="recommendation">Block payment release until the three-way match is complete and exception approval is formally documented.</field>
+            <field name="action_plan">Configure a payment control gate, produce a weekly exception report, and escalate unmatched payments to Finance and Procurement owners.</field>
+            <field name="target_date">2025-08-31</field>
+            <field name="management_response">Initial response was delayed; Audit escalated the issue after repeated follow-ups due to financial exposure.</field>
+            <field name="risk_impact">high</field>
+            <field name="risk_likelihood">high</field>
+        </record>
+
+        <record id="demo_audit_finding_eg2_inreview" model="audit.finding">
+            <field name="name">Delayed settlement approval for unmatched payments</field>
+            <field name="engagement_id" ref="demo_audit_engagement_payments"/>
+            <field name="description">Hero Case CF-001: Settlement approvals remained pending without a logged reason, delaying closure of the critical payment exception and increasing management exposure.</field>
+            <field name="severity">high</field>
+            <field name="status">in_review</field>
+            <field name="owner_id" ref="base.user_admin"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="due_date">2025-07-31</field>
+            <field name="root_cause">Settlement ownership changed without formal handover or workflow visibility in the system.</field>
+            <field name="impact">Delayed approval extended the exposure window and slowed management's ability to correct the payment control failure.</field>
+            <field name="recommendation">Introduce a visible approval status, named settlement owner, and escalation rule for overdue payment exceptions.</field>
+            <field name="action_plan">Finance and Procurement will standardize the settlement path, assign a single owner, and review all overdue exceptions weekly.</field>
+            <field name="target_date">2025-09-15</field>
+            <field name="management_response">Management approved the escalation workshop and assigned Finance as the accountable owner for settlement closure.</field>
+            <field name="risk_impact">medium</field>
+            <field name="risk_likelihood">high</field>
+        </record>
+
+        <record id="demo_corrective_action_payment_critical" model="audit.corrective.action">
+            <field name="name">Activate three-way match exception report</field>
+            <field name="finding_id" ref="demo_audit_finding_eg2_payment"/>
+            <field name="description">Create a weekly exception report listing payments, invoices, or receipts that fail the three-way match control.</field>
+            <field name="action_owner_id" ref="base.user_admin"/>
+            <field name="target_date">2025-08-31</field>
+            <field name="state">draft</field>
+            <field name="priority">critical</field>
+            <field name="followup_notes">Hero Case CF-001: No corrective action has started despite critical exposure. This item should appear as the urgent action in the executive demo dashboard.</field>
+        </record>
+
+        <record id="demo_corrective_action_procurement_assigned" model="audit.corrective.action">
+            <field name="name">Enforce PO evidence before payment routing</field>
+            <field name="finding_id" ref="demo_audit_finding_eg1_doc_po"/>
+            <field name="description">Update procurement controls so payment routing is blocked unless PO, receipt evidence, and technical sign-off are complete.</field>
+            <field name="action_owner_id" ref="base.user_admin"/>
+            <field name="target_date">2025-09-30</field>
+            <field name="state">assigned</field>
+            <field name="priority">high</field>
+            <field name="followup_notes">Hero Case CF-001: This assigned corrective action represents the first containment step before the payment control gate is activated.</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_report_ready_engagements" model="ir.actions.act_window">
+            <field name="name">Report-ready operations</field>
+            <field name="res_model">audit.engagement</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[('report_ready', '=', True)]</field>
+            <field name="search_view_id" ref="view_audit_engagement_search"/>
+        </record>
+
+        <record id="action_critical_findings_kpi" model="ir.actions.act_window">
+            <field name="name">High Risk Review Results</field>
+            <field name="res_model">audit.finding</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[('severity', '=', 'critical')]</field>
+            <field name="search_view_id" ref="view_audit_finding_search"/>
+        </record>
+
+        <record id="action_open_findings_kpi" model="ir.actions.act_window">
+            <field name="name">Open Review Results</field>
+            <field name="res_model">audit.finding</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[('status', '=', 'open')]</field>
+            <field name="search_view_id" ref="view_audit_finding_search"/>
+        </record>
+
+        <record id="action_closed_findings_kpi" model="ir.actions.act_window">
+            <field name="name">Closed Review Results</field>
+            <field name="res_model">audit.finding</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[('status', '=', 'closed')]</field>
+            <field name="search_view_id" ref="view_audit_finding_search"/>
+        </record>
+
+        <record id="view_audit_dashboard_kpi_form" model="ir.ui.view">
+            <field name="name">audit.dashboard.kpi.form</field>
+            <field name="model">audit.dashboard.kpi</field>
+            <field name="arch" type="xml">
+                <form string="Audit Control Center" class="o_auditflow_form" create="false" edit="false" delete="false">
+                    <field name="name" invisible="1"/>
+                    <sheet>
+                        <group string="Audit operations and report readiness" col="1">
+                            <field name="kpi_total_engagements" readonly="1"/>
+                            <field name="kpi_not_ready_engagements" readonly="1"/>
+                            <field name="kpi_report_ready_engagements" readonly="1"/>
+                        </group>
+                        <group string="Delayed visibility" col="1">
+                            <field name="kpi_overdue_findings" readonly="1"/>
+                        </group>
+                        <group string="Review result health" col="1">
+                            <field name="kpi_critical_findings" readonly="1"/>
+                            <field name="kpi_open_findings" readonly="1"/>
+                            <field name="kpi_closed_findings" readonly="1"/>
+                        </group>
+                        <group string="Workplan" col="1">
+                            <separator string="Open Workplan and related records from the Dashboard section in the app menu."/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Legacy KPI shell (audit.dashboard.kpi + action_audit_dashboard_kpi): kept for data/model;
+             hidden from UI — Executive Dashboard is the only Dashboard child. See data/audit_dashboard_menu_upgrade.xml -->
+        <menuitem id="menu_audit_control_center"
+                  name="Audit Control Center"
+                  parent="menu_smart_audit_section_dashboard"
+                  action="action_audit_dashboard_kpi"
+                  sequence="5"
+                  active="False"/>
+        <menuitem id="menu_audit_report_ready_engagements"
+                  name="Report-ready operations"
+                  parent="menu_smart_audit_section_engagements"
+                  action="action_report_ready_engagements"
+                  sequence="20"/>
+
+        <menuitem id="menu_audit_open_findings"
+                  name="Open Review Results"
+                  parent="menu_smart_audit_section_findings"
+                  action="action_open_findings_kpi"
+                  sequence="20"/>
+        <menuitem id="menu_audit_closed_findings"
+                  name="Closed Review Results"
+                  parent="menu_smart_audit_section_findings"
+                  action="action_closed_findings_kpi"
+                  sequence="30"/>
+
+        <!-- App root landing action is set in views/menu_views.xml (after actions exist). -->
+
+    </data>
+</odoo>

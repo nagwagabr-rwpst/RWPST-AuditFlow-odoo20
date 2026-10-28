@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_audit_dashboard" model="ir.ui.view">
+            <field name="name">audit.engagement.workplan.dashboard</field>
+            <field name="model">audit.engagement</field>
+            <field name="arch" type="xml">
+                <form string="Workplan dashboard" class="o_auditflow_form" create="false" edit="false" delete="false">
+                    <field name="id" invisible="1"/>
+                    <sheet>
+                        <group string="Navigation" col="1">
+                            <separator string="Return to Audit Control Center using the Dashboard section in the app menu."/>
+                        </group>
+                        <group string="Audit operations" col="1">
+                            <separator string="Open audit operation lists from the Audit Operations section in the app menu."/>
+                        </group>
+                        <group string="Review results" col="1">
+                            <separator string="Open review result lists from the Review results section in the app menu."/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_audit_dashboard" model="ir.actions.act_window">
+            <field name="name">Workplan dashboard</field>
+            <field name="res_model">audit.engagement</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_audit_dashboard"/>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

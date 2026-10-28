@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="action_audit_engagement_all" model="ir.actions.act_window">
+        <field name="name">All Audit Operations</field>
+        <field name="res_model">audit.engagement</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_audit_engagement_ready" model="ir.actions.act_window">
+        <field name="name">Ready for Report</field>
+        <field name="res_model">audit.engagement</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('state','=','reporting')]</field>
+    </record>
+
+    <record id="action_audit_findings_overdue" model="ir.actions.act_window">
+        <field name="name">Delayed Review Results</field>
+        <field name="res_model">audit.finding</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_overdue','=',True)]</field>
+    </record>
+
+    <record id="action_audit_findings_critical" model="ir.actions.act_window">
+        <field name="name">High Risk Review Results</field>
+        <field name="res_model">audit.finding</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('severity','=','critical')]</field>
+    </record>
+
+    <record id="action_audit_findings_open" model="ir.actions.act_window">
+        <field name="name">Open Review Results</field>
+        <field name="res_model">audit.finding</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('status','=','open')]</field>
+    </record>
+
+    <record id="action_audit_findings_closed" model="ir.actions.act_window">
+        <field name="name">Closed Review Results</field>
+        <field name="res_model">audit.finding</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('status','=','closed')]</field>
+    </record>
+
+    <record id="action_audit_dashboard_kpi" model="ir.actions.act_window">
+        <field name="name">Audit Control Center</field>
+        <field name="res_model">audit.dashboard.kpi</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="context">{}</field>
+    </record>
+    </data>
+</odoo>

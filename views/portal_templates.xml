@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- =============================================================== -->
+    <!-- /my home tile                                                    -->
+    <!-- =============================================================== -->
+    <record id="portal_entry_audit_plans" model="portal.entry">
+        <field name="name">Audit Plans</field>
+        <field name="url">/my/audit</field>
+        <field name="placeholder_count">audit_count</field>
+        <field name="sequence" eval="30"/>
+    </record>
+
+    <!-- =============================================================== -->
+    <!-- Listing page:  /my/audit                                         -->
+    <!-- =============================================================== -->
+    <template id="portal_my_audit" name="My Audit Plans">
+        <t t-call="portal.portal_layout" breadcrumbs_searchbar="True">
+            <t t-call="portal.portal_searchbar" breadcrumbs_searchbar="True" title.translate="Audit Plans"/>
+
+            <t t-if="not plans">
+                <div class="alert o_auditflow_portal o_auditflow_portal_empty mt8" role="alert">
+                    There are no audit plans visible to you yet.
+                </div>
+            </t>
+
+            <t t-if="plans" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Reference</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th class="text-end">Progress</th>
+                        <th class="text-end">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="plans" t-as="p">
+                        <td>
+                            <a t-attf-href="/my/audit/plan/#{p.id}">
+                                <t t-out="p.name"/>
+                            </a>
+                        </td>
+                        <td><t t-out="p.start_date"/></td>
+                        <td><t t-out="p.end_date"/></td>
+                        <td class="text-end">
+                            <t t-out="'%.0f %%' % (p.progress or 0.0)"/>
+                        </td>
+                        <td class="text-end">
+                            <span class="badge rounded-pill o_auditflow_badge">
+                                <t t-out="dict(p._fields['state'].selection).get(p.state)"/>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+
+            <div t-if="pager" class="o_portal_pager text-center">
+                <t t-call="portal.pager"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- =============================================================== -->
+    <!-- Detail page: /my/audit/plan/<id>                                 -->
+    <!-- =============================================================== -->
+    <template id="portal_audit_plan" name="Audit Plan Detail">
+        <t t-call="portal.portal_layout">
+            <div class="container mt-3 o_auditflow_portal">
+                <h2>
+                    Audit Plan
+                    <small class="text-muted"><t t-out="plan.name"/></small>
+                </h2>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <strong>Client:</strong>
+                        <t t-out="plan.client_id.name"/>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Status:</strong>
+                        <span class="badge rounded-pill o_auditflow_badge">
+                            <t t-out="dict(plan._fields['state'].selection).get(plan.state)"/>
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Start:</strong>
+                        <t t-out="plan.start_date"/>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>End:</strong>
+                        <t t-out="plan.end_date"/>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                        <strong>Progress:</strong>
+                        <t t-out="'%.0f %%' % (plan.progress or 0.0)"/>
+                    </div>
+                </div>
+
+                <h4 class="mt-4">Indicators</h4>
+                <t t-if="not indicators">
+                    <p class="text-muted">No indicators have been published for this plan.</p>
+                </t>
+                <ul class="list-group" t-if="indicators">
+                    <li class="list-group-item d-flex justify-content-between align-items-center"
+                        t-foreach="indicators" t-as="ind">
+                        <span><t t-out="ind.name"/></span>
+                        <span class="badge rounded-pill o_auditflow_badge">
+                            <t t-out="'%.0f %%' % (ind.score or 0.0)"/>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </t>
+    </template>
+
+</odoo>

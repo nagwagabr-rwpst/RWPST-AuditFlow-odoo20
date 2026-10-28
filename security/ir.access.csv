@@ -1,0 +1,50 @@
+id,name,model_id,group_id/id,operation,domain
+access_audit_plan_auditee,audit.plan auditee,audit.plan.stable,group_audit_auditee,r,"[('client_id','=',user.partner_id.id),('state','!=','draft')]"
+access_audit_plan_auditor,audit.plan auditor,audit.plan.stable,group_audit_auditor,cru,"[('lead_auditor_id','=',user.id)]"
+access_audit_plan_manager,audit.plan manager,audit.plan.stable,group_audit_manager,crud,
+access_audit_plan_cae,audit.plan cae,audit.plan.stable,group_audit_cae,crud,
+access_audit_task_auditee,audit.task auditee,audit.task.stable,group_audit_auditee,r,"[('plan_id.client_id','=',user.partner_id.id),('plan_id.state','!=','draft')]"
+access_audit_task_auditor,audit.task auditor,audit.task.stable,group_audit_auditor,cru,"['|', ('assigned_to','=',user.id), ('plan_id.lead_auditor_id','=',user.id)]"
+access_audit_task_manager,audit.task manager,audit.task.stable,group_audit_manager,crud,
+access_audit_task_cae,audit.task cae,audit.task.stable,group_audit_cae,crud,
+access_audit_indicator_auditee,audit.indicator auditee,audit.indicator.stable,group_audit_auditee,r,"[('plan_id.client_id','=',user.partner_id.id),('plan_id.state','!=','draft')]"
+access_audit_indicator_auditor,audit.indicator auditor,audit.indicator.stable,group_audit_auditor,cru,"[('plan_id.lead_auditor_id','=',user.id)]"
+access_audit_indicator_manager,audit.indicator manager,audit.indicator.stable,group_audit_manager,crud,
+access_audit_indicator_cae,audit.indicator cae,audit.indicator.stable,group_audit_cae,crud,
+access_audit_dashboard_auditor,audit.dashboard auditor,audit.dashboard.stable,group_audit_auditor,cru,
+access_audit_dashboard_manager,audit.dashboard manager,audit.dashboard.stable,group_audit_manager,cru,
+access_audit_dashboard_cae,audit.dashboard cae,audit.dashboard.stable,group_audit_cae,cru,
+access_audit_engagement_auditor,audit.engagement auditor,audit.engagement,group_audit_auditor,cru,"['|', ('lead_auditor_id', '=', user.id), ('auditor_ids', 'in', [user.id])]"
+access_audit_engagement_manager,audit.engagement manager,audit.engagement,group_audit_manager,crud,
+access_audit_engagement_cae,audit.engagement cae,audit.engagement,group_audit_cae,crud,
+access_audit_engagement_system,audit.engagement system,audit.engagement,base.group_system,crud,
+access_audit_engagement_auditee,audit.engagement auditee,audit.engagement,group_audit_auditee,r,"[('auditee_id', '=', user.partner_id.id)]"
+access_audit_finding_auditor,audit.finding auditor,audit.finding,group_audit_auditor,cru,"['|', ('engagement_id.lead_auditor_id', '=', user.id), ('engagement_id.auditor_ids', 'in', [user.id])]"
+access_audit_finding_manager,audit.finding manager,audit.finding,group_audit_manager,crud,
+access_audit_finding_cae,audit.finding cae,audit.finding,group_audit_cae,crud,
+access_audit_finding_system,audit.finding system,audit.finding,base.group_system,crud,
+access_audit_finding_auditee,audit.finding auditee,audit.finding,group_audit_auditee,r,"[('engagement_id.auditee_id', '=', user.partner_id.id)]"
+access_audit_corrective_action_auditor,audit.corrective.action auditor,audit.corrective.action,group_audit_auditor,crud,"['|', '|', '|', '|', ('action_owner_id', '=', user.id), ('finding_id.owner_id', '=', user.id), ('finding_id.responsible_id', '=', user.id), ('engagement_id.lead_auditor_id', '=', user.id), ('engagement_id.auditor_ids', 'in', [user.id])]"
+access_audit_corrective_action_manager,audit.corrective.action manager,audit.corrective.action,group_audit_manager,crud,
+access_audit_corrective_action_cae,audit.corrective.action cae,audit.corrective.action,group_audit_cae,crud,
+access_audit_corrective_action_system,audit.corrective.action system,audit.corrective.action,base.group_system,crud,
+access_audit_corrective_action_auditee,audit.corrective.action auditee,audit.corrective.action,group_audit_auditee,r,"[('engagement_id.auditee_id', '=', user.partner_id.id)]"
+access_issue_warning_wizard_auditor,audit.engagement issue warning wizard auditor,audit.engagement.issue.warning.wizard,group_audit_auditor,crud,
+access_issue_warning_wizard_manager,audit.engagement issue warning wizard manager,audit.engagement.issue.warning.wizard,group_audit_manager,crud,
+access_issue_warning_wizard_cae,audit.engagement issue warning wizard cae,audit.engagement.issue.warning.wizard,group_audit_cae,crud,
+access_issue_warning_wizard_system,audit.engagement issue warning wizard system,audit.engagement.issue.warning.wizard,base.group_system,crud,
+access_audit_dashboard_kpi_auditor,audit.dashboard kpi auditor,audit.dashboard.kpi,group_audit_auditor,cru,
+access_audit_dashboard_kpi_manager,audit.dashboard kpi manager,audit.dashboard.kpi,group_audit_manager,cru,
+access_audit_dashboard_kpi_cae,audit.dashboard kpi cae,audit.dashboard.kpi,group_audit_cae,cru,
+access_audit_dashboard_kpi_system,audit.dashboard kpi system,audit.dashboard.kpi,base.group_system,cru,
+access_audit_dashboard_service_senior,audit.dashboard.service senior,audit.dashboard.service,group_audit_senior_auditor,r,
+access_audit_dashboard_service_auditor,audit.dashboard.service auditor,audit.dashboard.service,group_audit_auditor,r,
+access_audit_dashboard_service_manager,audit.dashboard.service manager,audit.dashboard.service,group_audit_manager,r,
+access_audit_dashboard_service_cae,audit.dashboard.service cae,audit.dashboard.service,group_audit_cae,r,
+access_audit_dashboard_service_system,audit.dashboard.service system,audit.dashboard.service,base.group_system,r,
+rule_audit_plan_company,Audit Plan: multi-company,audit.plan.stable,,crud,"[('company_id','in',company_ids)]"
+rule_audit_task_company,Audit Task: multi-company,audit.task.stable,,crud,"[('company_id','in',company_ids)]"
+rule_audit_indicator_company,Audit Indicator: multi-company,audit.indicator.stable,,crud,"[('company_id','in',company_ids)]"
+rule_audit_engagement_company,Audit Engagement: multi-company,audit.engagement,,crud,"[('company_id', 'in', company_ids)]"
+rule_audit_finding_company,Audit review result: multi-company,audit.finding,,crud,"[('company_id', 'in', company_ids)]"
+rule_audit_corrective_action_company,Corrective action: multi-company,audit.corrective.action,,crud,"[('company_id', 'in', company_ids)]"

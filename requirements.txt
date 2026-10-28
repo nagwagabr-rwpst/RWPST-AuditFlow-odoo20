@@ -1,0 +1,4 @@
+# RWPST AuditFlow: no additional PyPI packages required (standard Odoo 19.0 stack).
+#
+# If you add Python dependencies in the future, list them here for Odoo.sh:
+#   https://www.odoo.com/documentation/19.0/administration/odoo_sh/getting_started.html

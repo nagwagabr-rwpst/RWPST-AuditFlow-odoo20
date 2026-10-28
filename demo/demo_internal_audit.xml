@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- FINAL HERO CASE: Audit Workflow Demo - No Automation Claims -->
+
+        <record id="demo_audit_finding_eg1_doc_po" model="audit.finding">
+            <field name="name">Control weakness in purchase documentation</field>
+            <field name="engagement_id" ref="demo_audit_engagement_procurement"/>
+            <field name="description">Hero Case CF-001: During audit review of the procurement-to-pay cycle, the audit team noted purchase orders approved with incomplete receipt evidence and missing technical sign-off. This was recorded as the first weakness in the payment control chain.</field>
+            <field name="severity">high</field>
+            <field name="status">open</field>
+            <field name="owner_id" ref="base.user_admin"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="due_date">2025-07-15</field>
+            <field name="root_cause">Mandatory verification steps were not consistently completed before procurement documents moved toward payment review.</field>
+            <field name="impact">Incomplete documentation weakened the audit trail and increased the risk of unsupported payments.</field>
+            <field name="recommendation">Require complete receipt evidence, technical sign-off, and purchase order documentation before payment review.</field>
+            <field name="action_plan">Procurement will update the review checklist and assign ownership for document completeness before payment routing.</field>
+            <field name="target_date">2025-09-30</field>
+            <field name="management_response">Management acknowledged the documentation gap and agreed to coordinate with Finance on the corrective path.</field>
+            <field name="risk_impact">high</field>
+            <field name="risk_likelihood">medium</field>
+        </record>
+
+        <record id="demo_audit_finding_eg2_payment" model="audit.finding">
+            <field name="name">Critical payment released without full three-way match</field>
+            <field name="engagement_id" ref="demo_audit_engagement_payments"/>
+            <field name="description">Hero Case CF-001: During audit sample testing of the payment cycle, the audit team identified a payment case where the purchase order, receipt confirmation, and invoice validation were not fully aligned. Similar exceptions were observed across multiple samples, indicating a recurring control weakness rather than an isolated case.</field>
+            <field name="severity">critical</field>
+            <field name="status">open</field>
+            <field name="owner_id" ref="base.user_admin"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="due_date">2025-06-30</field>
+            <field name="root_cause">Payment review relied on manual follow-up without a consistently documented three-way match control.</field>
+            <field name="impact">The issue exposed the company to financial leakage, duplicate payment risk, weak evidence, and audit non-compliance.</field>
+            <field name="recommendation">Require documented three-way match evidence before payment approval, with formal exception approval where needed.</field>
+            <field name="action_plan">Finance will prepare a weekly exception list, assign responsible owners, and escalate unmatched payments for management review.</field>
+            <field name="target_date">2025-08-31</field>
+            <field name="management_response">Initial management response was delayed; Audit escalated the matter due to the critical financial exposure.</field>
+            <field name="risk_impact">high</field>
+            <field name="risk_likelihood">high</field>
+        </record>
+
+        <record id="demo_audit_finding_eg2_inreview" model="audit.finding">
+            <field name="name">Delayed settlement approval for unmatched payments</field>
+            <field name="engagement_id" ref="demo_audit_engagement_payments"/>
+            <field name="description">Hero Case CF-001: During follow-up, the audit team noted that settlement approvals for unmatched payments remained pending without a clear logged reason, delaying closure of the critical payment finding.</field>
+            <field name="severity">high</field>
+            <field name="status">in_review</field>
+            <field name="owner_id" ref="base.user_admin"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="due_date">2025-07-31</field>
+            <field name="root_cause">Settlement ownership changed without formal handover or sufficient visibility in the approval path.</field>
+            <field name="impact">Delayed approval extended the exposure window and slowed management's ability to correct the payment control weakness.</field>
+            <field name="recommendation">Define a named settlement owner, visible approval status, and escalation rule for overdue payment exceptions.</field>
+            <field name="action_plan">Finance and Procurement will standardize the settlement path, assign a single accountable owner, and review overdue exceptions weekly.</field>
+            <field name="target_date">2025-09-15</field>
+            <field name="management_response">Management approved an escalation workshop and assigned Finance as the accountable owner for settlement closure.</field>
+            <field name="risk_impact">medium</field>
+            <field name="risk_likelihood">high</field>
+        </record>
+
+        <record id="demo_corrective_action_payment_critical" model="audit.corrective.action">
+            <field name="name">Prepare three-way match exception report</field>
+            <field name="finding_id" ref="demo_audit_finding_eg2_payment"/>
+            <field name="description">Prepare a weekly audit follow-up report listing payments, invoices, or receipts that do not have complete three-way match evidence.</field>
+            <field name="action_owner_id" ref="base.user_admin"/>
+            <field name="target_date">2025-08-31</field>
+            <field name="state">draft</field>
+            <field name="priority">critical</field>
+            <field name="followup_notes">Hero Case CF-001: No corrective action has been initiated following audit escalation. This item should appear as the urgent action in the executive demo dashboard.</field>
+        </record>
+
+        <record id="demo_corrective_action_procurement_assigned" model="audit.corrective.action">
+            <field name="name">Strengthen PO evidence before payment review</field>
+            <field name="finding_id" ref="demo_audit_finding_eg1_doc_po"/>
+            <field name="description">Update procurement review steps so payment review is not requested until PO evidence, receipt evidence, and technical sign-off are complete.</field>
+            <field name="action_owner_id" ref="base.user_admin"/>
+            <field name="target_date">2025-09-30</field>
+            <field name="state">assigned</field>
+            <field name="priority">high</field>
+            <field name="followup_notes">Hero Case CF-001: This assigned corrective action represents the first containment step before Finance completes the payment exception follow-up.</field>
+        </record>
+    </data>
+</odoo>

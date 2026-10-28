@@ -1,0 +1,507 @@
+/* AuditFlow operational screens.
+   Loaded from web.assets_backend (see __manifest__.py).
+   Odoo 20 paints .btn-primary from --bs-btn-* on the button itself, outline
+   New from --bs-btn-color, the current status stage from --bs-btn-disabled-bg,
+   and the navbar from the community purple. A background-color rule on
+   .btn-primary does not cover those states, list views, or the navbar.
+   Selectors stay on AuditFlow view roots, or on the navbar only while this
+   app's menu xmlid is the current app. */
+
+$af-navy: #0f172a;
+$af-indigo: #1e3a8a;
+$af-blue: #2563eb;
+$af-blue-border: #1d4ed8;
+$af-orange: #f97316;
+$af-orange-soft: #ffedd5;
+$af-orange-ink: #9a3412;
+$af-blue-soft: #dbeafe;
+$af-focus: 0 0 0 3px rgba(37, 99, 235, 0.35);
+
+@mixin af-primary-button {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #{$af-blue};
+    --bs-btn-border-color: #{$af-blue-border};
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #{$af-indigo};
+    --bs-btn-hover-border-color: #{$af-indigo};
+    --bs-btn-focus-shadow-rgb: 37, 99, 235;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #{$af-indigo};
+    --bs-btn-active-border-color: #{$af-indigo};
+    --bs-btn-disabled-color: #ffffff;
+    --bs-btn-disabled-bg: #{$af-blue};
+    --bs-btn-disabled-border-color: #{$af-blue-border};
+    color: #ffffff;
+    background-color: #{$af-blue};
+    background-image: none;
+    border-color: #{$af-blue-border};
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active,
+    &.active {
+        color: #ffffff;
+        background-color: #{$af-indigo};
+        background-image: none;
+        border-color: #{$af-indigo};
+    }
+
+    &:focus-visible {
+        outline: 2px solid #{$af-blue};
+        outline-offset: 2px;
+        box-shadow: $af-focus;
+    }
+}
+
+@mixin af-outline-primary-button {
+    --bs-btn-color: #{$af-blue};
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #{$af-blue};
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #{$af-blue};
+    --bs-btn-hover-border-color: #{$af-blue};
+    --bs-btn-focus-shadow-rgb: 37, 99, 235;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #{$af-indigo};
+    --bs-btn-active-border-color: #{$af-indigo};
+    --bs-btn-disabled-color: #{$af-blue};
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #{$af-blue};
+    color: #{$af-blue};
+    background-color: transparent;
+    background-image: none;
+    border-color: #{$af-blue};
+
+    &:hover,
+    &:focus-visible,
+    &:active,
+    &.active {
+        color: #ffffff;
+        background-color: #{$af-blue};
+        background-image: none;
+        border-color: #{$af-blue};
+    }
+
+    &:focus-visible {
+        outline: 2px solid #{$af-blue};
+        outline-offset: 2px;
+        box-shadow: $af-focus;
+    }
+}
+
+@mixin af-operational-chrome {
+    --Notebook__link-border-top-color--active: #{$af-blue};
+    --o-stat-text-color: #{$af-blue};
+    --o-stat-button-color: #{$af-blue};
+    --bs-primary-bg-subtle: #{$af-blue-soft};
+    --bs-primary-text-emphasis: #{$af-indigo};
+    --bs-link-color: #{$af-blue};
+    --bs-link-hover-color: #{$af-indigo};
+
+    .btn-primary,
+    .oe_highlight {
+        @include af-primary-button;
+    }
+
+    .btn-outline-primary {
+        @include af-outline-primary-button;
+    }
+
+    .btn-secondary:not(.o_arrow_button):not(.active):hover,
+    .btn-secondary:not(.o_arrow_button):not(.active):focus-visible {
+        --bs-btn-hover-color: #{$af-orange-ink};
+        --bs-btn-hover-bg: #{$af-orange-soft};
+        --bs-btn-hover-border-color: #{$af-orange};
+        --bs-btn-focus-shadow-rgb: 249, 115, 22;
+        color: #{$af-orange-ink};
+        background-color: #{$af-orange-soft};
+        background-image: none;
+        border-color: #{$af-orange};
+    }
+
+    .btn-secondary:not(.o_arrow_button):focus-visible {
+        outline: 2px solid #{$af-orange};
+        outline-offset: 2px;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.35);
+    }
+
+    .btn-secondary.active:not(.o_arrow_button),
+    .o_graph_button.active,
+    .o_switcher .btn.active {
+        --bs-btn-active-color: #{$af-indigo};
+        --bs-btn-active-bg: #{$af-blue-soft};
+        --bs-btn-active-border-color: #{$af-blue};
+        color: #{$af-indigo};
+        background-color: #{$af-blue-soft};
+        background-image: none;
+        border-color: #{$af-blue};
+    }
+
+    .o_field_statusbar > .o_statusbar_status .o_arrow_button.o_arrow_button_current:not(.d-none) {
+        --bs-btn-bg: #{$af-indigo};
+        --bs-btn-color: #ffffff;
+        --bs-btn-border-color: #{$af-indigo};
+        --bs-btn-disabled-bg: #{$af-indigo};
+        --bs-btn-disabled-color: #ffffff;
+        --bs-btn-disabled-border-color: #{$af-indigo};
+        background-color: #{$af-indigo};
+        background-image: none;
+        border-color: #{$af-indigo};
+        color: #ffffff;
+        opacity: 1;
+    }
+
+    .o_notebook .nav-link.active,
+    .o_notebook .nav-link.active:hover,
+    .o_notebook .nav-link.active:focus {
+        color: #{$af-navy};
+        font-weight: 600;
+        border-top-color: #{$af-blue};
+    }
+
+    .o_notebook .nav-link:not(.active) {
+        color: #475569;
+    }
+
+    .o_notebook .nav-link:focus-visible,
+    .o_notebook .nav-link.active:focus-visible {
+        outline: 2px solid #{$af-blue};
+        outline-offset: -2px;
+        box-shadow: inset 0 0 0 2px #{$af-blue};
+    }
+
+    a:not(.btn):not(.dropdown-item),
+    .o_form_uri {
+        color: #{$af-blue};
+    }
+
+    a:not(.btn):not(.dropdown-item):hover,
+    .o_form_uri:hover {
+        color: #{$af-indigo};
+    }
+
+    .text-primary,
+    .text-action {
+        color: #{$af-blue} !important;
+    }
+
+    .btn-link.text-action:hover,
+    .btn-link.text-action:focus,
+    .btn-link.text-action:focus-visible,
+    .btn-link.text-action.active,
+    .btn-link.text-action.focus {
+        color: #{$af-indigo} !important;
+    }
+
+    .bg-primary-subtle,
+    .o_searchview_facet_label.bg-primary-subtle,
+    .o_searchview_facet_label.text-primary {
+        background-color: #{$af-blue-soft} !important;
+        color: #{$af-indigo} !important;
+    }
+
+    .text-bg-primary,
+    .o_facet_overlay.text-bg-primary {
+        background-color: #{$af-indigo} !important;
+        color: #ffffff !important;
+    }
+
+    .o_searchview:focus-within {
+        border-color: #{$af-blue};
+    }
+
+    .o_searchview:focus-within + .o_searchview_dropdown_toggler,
+    .o_searchview_dropdown_toggler.btn-outline-secondary.show {
+        --bs-btn-active-border-color: #{$af-blue};
+        --bs-btn-active-color: #{$af-indigo};
+        border-color: #{$af-blue};
+        color: #{$af-indigo};
+    }
+
+    .o_field_widget:focus-within:not(.o_field_invalid) {
+        --o-input-border-color: #{$af-blue};
+        --o-caret-color: #{$af-blue};
+    }
+
+    .o_required_modifier:not(.o_field_invalid) {
+        --o-input-border-color: #{$af-blue};
+        --o-caret-color: #{$af-blue};
+    }
+
+    .form-check-input:checked {
+        background-color: #{$af-blue};
+        border-color: #{$af-indigo};
+    }
+
+    .form-check-input:focus {
+        border-color: #{$af-blue};
+        box-shadow: $af-focus;
+    }
+
+    .form-control:focus,
+    .o_input:focus {
+        border-color: #{$af-blue};
+        box-shadow: $af-focus;
+    }
+
+    .progress-bar:not(.bg-success):not(.bg-warning):not(.bg-danger):not(.bg-info) {
+        background-color: #{$af-blue};
+    }
+
+    .o_data_row.o_selected_row > .o_data_cell.o_required_modifier:not(.o_invalid_cell),
+    .o_data_row.o_selected_row > .o_data_cell.o_stacked_fields > .o_column_group_field.o_required_modifier:not(.o_invalid_cell) .o_input {
+        border-bottom-color: #{$af-blue};
+    }
+}
+
+.o_form_view.o_auditflow_form,
+.o_list_view.o_auditflow_list,
+.o_graph_view.o_auditflow_graph,
+.o_pivot_view.o_auditflow_pivot,
+.modal:has(.o_form_view.o_auditflow_form) .modal-footer {
+    @include af-operational-chrome;
+}
+
+.o_form_view.o_auditflow_form {
+    .oe_title h1,
+    .oe_title h1 .o_field_widget {
+        color: #0f172a;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+
+    .o_horizontal_separator {
+        color: #1e3a8a;
+        letter-spacing: 0.04em;
+    }
+
+    .o_form_label {
+        color: #334155;
+    }
+
+    .o-form-buttonbox .oe_stat_button {
+        border-radius: 10px;
+    }
+
+    .o-form-buttonbox .o_stat_text,
+    .o-form-buttonbox .o_stat_info {
+        line-height: 1.25;
+        text-align: start;
+    }
+}
+
+/* Desktop: keep the sheet usable and stop the side chatter from growing past a sidebar. */
+@media (min-width: 1400px) {
+    .o_form_view.o_auditflow_form .o_form_renderer.flex-nowrap {
+        align-items: stretch;
+    }
+
+    .o_form_view.o_auditflow_form .o_form_sheet_bg {
+        flex: 1 1 auto;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .o_form_view.o_auditflow_form .o-mail-Form-chatter.o-aside {
+        flex: 0 0 400px;
+        width: 400px;
+        max-width: 400px;
+        min-width: 320px;
+    }
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px 0 18px;
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    border-inline-start-width: 4px;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_panel.is-pending {
+    border-inline-start-color: #f97316;
+    background: #fff7ed;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_panel.is-ready {
+    border-inline-start-color: #34d399;
+    background: #f0fdf9;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    width: 100%;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_kicker {
+    color: #0f172a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_panel.is-pending .o_audit_readiness_pill {
+    background: #f97316;
+    color: #ffffff;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_panel.is-ready .o_audit_readiness_pill {
+    background: #34d399;
+    color: #0f172a;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_panel .o_field_widget,
+.o_form_view.o_auditflow_form .o_audit_readiness_panel .o_field_text {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.o_form_view.o_auditflow_form .o_audit_readiness_panel .o_field_text {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: normal;
+    line-height: 1.55;
+    color: #0f172a;
+}
+
+.o_form_view.o_auditflow_form .o_auditflow_warning_banner {
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    border: 1px solid #fdba74;
+    border-inline-start: 4px solid #f97316;
+    border-radius: 12px;
+    background: #fff7ed;
+    color: #0f172a;
+}
+
+.o_form_view.o_auditflow_form .o_auditflow_warning_banner .o_form_label {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.o_list_view.o_auditflow_list {
+    .text-success {
+        color: #047857 !important;
+    }
+
+    .text-warning {
+        color: #c2410c !important;
+    }
+
+    .text-danger {
+        color: #b91c1c !important;
+    }
+
+    .text-info {
+        color: #1e3a8a !important;
+    }
+
+    .badge.text-bg-success {
+        background-color: #34d399 !important;
+        color: #0f172a !important;
+    }
+
+    .badge.text-bg-warning {
+        background-color: #f97316 !important;
+        color: #ffffff !important;
+    }
+
+    .badge.text-bg-info,
+    .badge.text-bg-primary {
+        background-color: #1e3a8a !important;
+        color: #ffffff !important;
+    }
+
+    .badge.text-bg-danger {
+        background-color: #dc2626 !important;
+        color: #ffffff !important;
+    }
+}
+
+.o_form_view.o_auditflow_form {
+    .badge.text-bg-success {
+        background-color: #34d399 !important;
+        color: #0f172a !important;
+    }
+
+    .badge.text-bg-warning {
+        background-color: #f97316 !important;
+        color: #ffffff !important;
+    }
+
+    .badge.text-bg-info,
+    .badge.text-bg-primary {
+        background-color: #1e3a8a !important;
+        color: #ffffff !important;
+    }
+
+    .badge.text-bg-danger {
+        background-color: #dc2626 !important;
+        color: #ffffff !important;
+    }
+}
+
+.o_view_nocontent .o_auditflow_empty {
+    max-width: 42rem;
+    margin-inline: auto;
+    color: #0f172a;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+body.o_rtl .o_form_view.o_auditflow_form .o_audit_readiness_head,
+body.o_rtl .o_form_view.o_auditflow_form .o_audit_readiness_panel .o_field_text,
+body.o_rtl .o_form_view.o_auditflow_form .o_auditflow_warning_banner {
+    text-align: right;
+}
+
+/* Navbar only while Internal Audit is the open app. Other apps keep Odoo purple. */
+.o_main_navbar:has([data-menu-xmlid="auditflow_standard.menu_smart_audit_root"]) {
+    background: linear-gradient(110deg, #0f172a 0%, #1e3a8a 48%, #2563eb 100%);
+
+    .o_menu_sections .dropdown.show > .dropdown-toggle,
+    .o_menu_sections .show > button[data-menu-xmlid] {
+        box-shadow: inset 0 -3px 0 #f97316;
+    }
+}
+
+li.o_app[data-menu-xmlid="auditflow_standard.menu_smart_audit_root"].bg-primary-subtle {
+    background-color: #dbeafe !important;
+    color: #1e3a8a;
+}
+
+.o_form_view.o_auditflow_form .o_cell:focus-within,
+.o_form_view.o_auditflow_form .o_outlined:focus-within,
+.o_form_view.o_auditflow_form .o_property_field_value:focus-within {
+    --o-field-box-border-color: #2563eb;
+}
+
+.o_form_view.o_auditflow_form .o_wrap_label:has(+ .o_cell:focus-within) .o_form_label,
+.o_form_view.o_auditflow_form .o_property_field label:has(+ *:focus-within),
+.o_form_view.o_auditflow_form .o_form_label sup {
+    color: #1e3a8a !important;
+}

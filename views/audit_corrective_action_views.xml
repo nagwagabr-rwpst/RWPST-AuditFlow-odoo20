@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_audit_corrective_action_list" model="ir.ui.view">
+            <field name="name">audit.corrective.action.list</field>
+            <field name="model">audit.corrective.action</field>
+            <field name="arch" type="xml">
+                <list string="الإجراءات التصحيحية (CAPA)"
+                      class="o_auditflow_list"
+                      default_order="target_date asc, id desc"
+                      decoration-danger="is_overdue"
+                      decoration-success="state == 'done'"
+                      decoration-warning="state == 'in_progress'">
+                    <field name="name" string="عنوان الإجراء التصحيحي"/>
+                    <field name="engagement_id" string="عملية المراجعة"/>
+                    <field name="finding_id" string="نتيجة المراجعة"/>
+                    <field name="action_owner_id" string="مالك الإجراء التصحيحي" widget="many2one_avatar"/>
+                    <field name="target_date" string="تاريخ التنفيذ المستهدف"/>
+                    <field name="state" string="حالة التنفيذ" widget="badge"
+                           decoration-danger="is_overdue and state not in ('done', 'cancelled')"
+                           decoration-muted="state in ('draft', 'cancelled')"
+                           decoration-info="state == 'assigned'"
+                           decoration-warning="state == 'in_progress'"
+                           decoration-success="state == 'done'"/>
+                    <field name="is_overdue" string="متأخر التنفيذ" optional="show"/>
+                    <field name="days_overdue" string="أيام التأخير" optional="show"/>
+                    <field name="priority" string="الأولوية" optional="show"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_audit_corrective_action_form" model="ir.ui.view">
+            <field name="name">audit.corrective.action.form</field>
+            <field name="model">audit.corrective.action</field>
+            <field name="arch" type="xml">
+                <form string="الإجراء التصحيحي (CAPA)" class="o_auditflow_form">
+                    <header>
+                        <button name="action_assign" string="تعيين" type="object" class="btn-primary"
+                                invisible="state != 'draft'"/>
+                        <button name="action_start" string="بدء التنفيذ" type="object" class="btn-primary"
+                                invisible="state not in ('draft', 'assigned')"/>
+                        <button name="action_done" string="تحديد كمكتمل" type="object" class="btn-primary"
+                                invisible="state in ('done', 'cancelled')"/>
+                        <button name="action_cancel" string="إلغاء" type="object" class="btn-secondary"
+                                invisible="state in ('done', 'cancelled')"/>
+                        <button name="action_reset_draft" string="إرجاع إلى مسودة" type="object" class="btn-secondary"
+                                invisible="state == 'draft'"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,assigned,in_progress,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="عنوان الإجراء التصحيحي"/>
+                            <h1>
+                                <field name="name" placeholder="مثال: مسار اعتماد المستندات..."/>
+                            </h1>
+                        </div>
+                        <group string="ملخص الإجراء التصحيحي">
+                            <field name="description" nolabel="1" placeholder="صف الإجراء التصحيحي..."/>
+                        </group>
+                        <group string="سياق عملية المراجعة المرتبطة">
+                            <group>
+                                <field name="finding_id" string="نتيجة المراجعة" options="{'no_create': True}"/>
+                                <field name="engagement_id" string="عملية المراجعة" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="company_id" string="الشركة" groups="base.group_multi_company" readonly="1"/>
+                                <field name="priority" string="الأولوية"/>
+                            </group>
+                        </group>
+                        <group string="المسؤولية والمواعيد النهائية">
+                            <group>
+                                <field name="action_owner_id" string="مالك الإجراء التصحيحي" widget="many2one_avatar"/>
+                                <field name="target_date" string="تاريخ التنفيذ المستهدف"/>
+                                <field name="completion_date" string="تاريخ الإكمال" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="is_overdue" string="متأخر التنفيذ" readonly="1"/>
+                                <field name="days_overdue" string="أيام التأخير" readonly="1"/>
+                            </group>
+                        </group>
+                        <group string="المتابعة">
+                            <group>
+                                <field name="management_comment" nolabel="1"
+                                       placeholder="رد الإدارة..."/>
+                            </group>
+                            <group>
+                                <field name="followup_notes" nolabel="1"
+                                       placeholder="ملاحظات متابعة داخلية..."/>
+                            </group>
+                        </group>
+                        <group string="الأدلة والمرفقات">
+                            <field name="evidence_attachment_ids" widget="many2many_binary" nolabel="1"/>
+                        </group>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_audit_corrective_action_search" model="ir.ui.view">
+            <field name="name">audit.corrective.action.search</field>
+            <field name="model">audit.corrective.action</field>
+            <field name="arch" type="xml">
+                <search string="الإجراءات التصحيحية (CAPA)">
+                    <field name="name" string="عنوان الإجراء التصحيحي"/>
+                    <field name="engagement_id" string="عملية المراجعة"/>
+                    <field name="finding_id" string="نتيجة المراجعة"/>
+                    <field name="action_owner_id" string="مالك الإجراء التصحيحي"/>
+                    <field name="state" string="حالة التنفيذ"/>
+                    <filter string="إجراءاتي التصحيحية (CAPA)"
+                            name="filter_my_actions"
+                            domain="[('action_owner_id', '=', uid)]"/>
+                    <filter string="إجراءات تصحيحية مفتوحة (CAPA)"
+                            name="filter_open"
+                            domain="[('state', 'not in', ('done', 'cancelled'))]"/>
+                    <filter string="إجراءات تصحيحية متأخرة (CAPA)"
+                            name="filter_overdue"
+                            domain="[('is_overdue', '=', True)]"/>
+                    <filter string="إجراءات تصحيحية مكتملة (CAPA)"
+                            name="filter_completed"
+                            domain="[('state', '=', 'done')]"/>
+                    <filter string="أولوية مرتفعة"
+                            name="filter_priority_high"
+                            domain="[('priority', '=', 'high')]"/>
+                    <filter string="أولوية عالية الخطورة"
+                            name="filter_priority_critical"
+                            domain="[('priority', '=', 'critical')]"/>
+                    <separator/>
+                    <filter string="حالة التنفيذ" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="مالك الإجراء التصحيحي" name="group_action_owner" context="{'group_by': 'action_owner_id'}"/>
+                    <filter string="عملية المراجعة" name="group_engagement" context="{'group_by': 'engagement_id'}"/>
+                    <filter string="الأولوية" name="group_priority" context="{'group_by': 'priority'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_audit_corrective_action" model="ir.actions.act_window">
+            <field name="name">الإجراءات التصحيحية (CAPA)</field>
+            <field name="res_model">audit.corrective.action</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_audit_corrective_action_search"/>
+            <field name="help" type="html">
+                <p class="o_auditflow_empty">
+                    سجّل الإجراءات التصحيحية (CAPA) المرتبطة بنتائج المراجعة لمتابعة تنفيذ الإدارة.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_audit_corrective_action_my" model="ir.actions.act_window">
+            <field name="name">إجراءاتي التصحيحية (CAPA)</field>
+            <field name="res_model">audit.corrective.action</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_audit_corrective_action_search"/>
+            <field name="context" eval="{'search_default_filter_my_actions': 1}"/>
+        </record>
+
+        <record id="action_audit_corrective_action_overdue" model="ir.actions.act_window">
+            <field name="name">إجراءات تصحيحية متأخرة (CAPA)</field>
+            <field name="res_model">audit.corrective.action</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_audit_corrective_action_search"/>
+            <field name="context" eval="{'search_default_filter_overdue': 1}"/>
+        </record>
+
+        <record id="action_audit_corrective_action_completed" model="ir.actions.act_window">
+            <field name="name">إجراءات تصحيحية مكتملة (CAPA)</field>
+            <field name="res_model">audit.corrective.action</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_audit_corrective_action_search"/>
+            <field name="context" eval="{'search_default_filter_completed': 1}"/>
+        </record>
+
+    </data>
+</odoo>

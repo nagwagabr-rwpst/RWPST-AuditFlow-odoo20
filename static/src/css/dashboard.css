@@ -1,0 +1,692 @@
+﻿/* Workplan dashboard (audit.engagement form shell) */
+body.o_rtl .audit-dashboard {
+    direction: rtl;
+}
+/* Workplan shell only (.audit-dashboard) — not OWL .o_audit_dashboard executive client */
+.audit-dashboard {
+    max-width: 1180px;
+    margin: 0;
+    padding: 16px;
+}
+
+.o_audit_section {
+    margin-bottom: 22px;
+}
+
+.o_audit_section_title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+}
+
+.o_audit_alert {
+    font-size: 13px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    background: #e7f1ff;
+    color: #1e3a5f;
+    border: 1px solid #c7d9f0;
+}
+
+/* ================================
+   Metrics snapshot KPI form / legacy styling hooks
+   Aligned with Workplan workspace tone
+================================ */
+.o_audit_control_center {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.o_audit_control_hero {
+    margin: 0 0 12px 0;
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.o_audit_control_hero_title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 0 0 6px 0;
+}
+
+.o_audit_control_hero_subtitle {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #64748b;
+    max-width: 60ch;
+}
+
+.o_audit_control_helper {
+    display: block;
+    margin: 0 0 20px 0;
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #64748b;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.o_audit_control_helper_text {
+    color: #64748b;
+}
+
+.o_audit_control_section {
+    margin-bottom: 20px;
+}
+
+.o_audit_control_section:last-of-type {
+    margin-bottom: 0;
+}
+
+.o_audit_control_section_title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin: 0 0 10px 0;
+}
+
+.o_audit_control_grid {
+    width: 100%;
+}
+
+/* Reset workplan flex caps so Bootstrap 3-up grid fills columns evenly */
+.o_audit_control_center .o_audit_kpi_block {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    flex: none;
+    width: 100%;
+}
+
+/* Three equal columns: Bootstrap col-md-4 + this ensures stretch */
+.o_audit_control_grid_3 .o_audit_kpi_block,
+.o_audit_control_grid_single .o_audit_kpi_block {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.o_audit_control_kpi_row {
+    align-items: stretch !important;
+}
+
+/* Single Overdue card: same column width as one KPI in 3-up grid, not full row width */
+.o_audit_control_grid_single .o_audit_kpi_block {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .o_audit_control_grid_single .o_audit_kpi_block {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.o_audit_control_center .o_audit_card {
+    min-height: 145px;
+    padding: 14px 12px 12px 12px;
+    border: 1px solid #e8ebef;
+    border-radius: 13px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    border-width: 1px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    justify-content: space-between;
+}
+
+.o_audit_control_center .o_audit_card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.07);
+    border-color: #dbe0e6;
+}
+
+.o_audit_control_center .o_audit_value {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #0f172a;
+}
+
+.o_audit_control_center .o_audit_label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #6b7280;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+
+.o_audit_control_center .o_audit_icon {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 8px;
+    font-size: 16px !important;
+    border-radius: 9px;
+}
+
+.o_audit_control_center .o_audit_kpi_hint {
+    margin-top: auto;
+    padding-top: 6px;
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+    gap: 4px;
+}
+
+.o_audit_control_center .o_audit_kpi_hint .o_audit_kpi_hint_text {
+    font-size: 10px;
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+.o_audit_control_center .o_audit_kpi_hint .o_audit_kpi_hint_icon {
+    font-size: 10px !important;
+    opacity: 0.65;
+}
+
+.o_audit_control_center button.oe_stat_button.o_audit_kpi_button:hover .o_audit_kpi_hint .o_audit_kpi_hint_text {
+    color: #64748b;
+}
+
+.o_audit_control_center button.oe_stat_button.o_audit_kpi_button:hover .o_audit_kpi_hint .o_audit_kpi_hint_icon {
+    opacity: 0.9;
+}
+
+/* CTA: same max-width context, breathing room from last KPI row */
+.o_audit_control_cta {
+    margin-top: 20px;
+}
+
+.o_audit_kpi_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.o_audit_kpi_row_findings {
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.o_audit_kpi_block {
+    flex: 1 1 200px;
+    max-width: 280px;
+    margin: 0 6px 12px 6px;
+    box-sizing: border-box;
+}
+
+.o_audit_card {
+    min-height: 120px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.o_audit_card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.o_audit_icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px !important;
+    margin-bottom: 10px;
+    background: #f4f6f8;
+}
+
+.o_audit_label {
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.o_audit_kpi_button {
+    margin-top: 4px;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #e5e7eb;
+    background: #fafbfc;
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    color: #374151;
+    text-align: center;
+}
+
+.o_audit_kpi_button:hover {
+    background: #f3f4f6;
+    text-decoration: none;
+}
+
+.o_audit_kpi_button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* Full-width stat buttons wrapping o_audit_card (Control Center) */
+button.oe_stat_button.o_audit_kpi_button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: inherit;
+    box-shadow: none;
+}
+
+button.oe_stat_button.o_audit_kpi_button:hover,
+button.oe_stat_button.o_audit_kpi_button:focus {
+    background: transparent;
+    box-shadow: none;
+}
+
+.o_audit_value {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Color variants: icon on colored card */
+.o_audit_card_primary .o_audit_icon {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.o_audit_card_warning .o_audit_icon {
+    color: #ffffff;
+    background: #f97316;
+}
+
+.o_audit_card_success .o_audit_icon {
+    color: #0f172a;
+    background: #34d399;
+}
+
+.o_audit_card_danger .o_audit_icon {
+    color: #d92d20;
+    background: #fdecec;
+}
+
+.o_audit_card_muted .o_audit_icon {
+    color: #667085;
+    background: #f2f4f7;
+}
+
+/* Metrics snapshot KPI form â€” per-card "Click to open" hint (audit_dashboard_kpi_views.xml) */
+.o_audit_card .o_audit_kpi_hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.o_audit_kpi_hint_text {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #6b7280;
+}
+
+.o_audit_kpi_hint_icon {
+    font-size: 12px !important;
+    line-height: 1;
+    vertical-align: middle;
+    opacity: 0.9;
+}
+
+.o_audit_card_primary .o_audit_kpi_hint_icon {
+    color: #2563eb;
+}
+
+.o_audit_card_warning .o_audit_kpi_hint_icon {
+    color: #c2410c;
+}
+
+.o_audit_card_success .o_audit_kpi_hint_icon {
+    color: #047857;
+}
+
+.o_audit_card_danger .o_audit_kpi_hint_icon {
+    color: #d92d20;
+}
+
+.o_audit_card_muted .o_audit_kpi_hint_icon {
+    color: #667085;
+}
+
+button.oe_stat_button.o_audit_kpi_button:hover .o_audit_kpi_hint .o_audit_kpi_hint_text,
+button.oe_stat_button.o_audit_kpi_button:hover .o_audit_kpi_hint .o_audit_kpi_hint_icon {
+    color: #111827;
+}
+
+button.oe_stat_button.o_audit_kpi_button:hover .o_audit_card_primary .o_audit_kpi_hint_icon {
+    color: #1e3a8a;
+}
+
+button.oe_stat_button.o_audit_kpi_button:hover .o_audit_card_warning .o_audit_kpi_hint_icon {
+    color: #92400e;
+}
+
+button.oe_stat_button.o_audit_kpi_button:hover .o_audit_card_success .o_audit_kpi_hint_icon {
+    color: #166534;
+}
+
+button.oe_stat_button.o_audit_kpi_button:hover .o_audit_card_danger .o_audit_kpi_hint_icon {
+    color: #b91c1c;
+}
+
+button.oe_stat_button.o_audit_kpi_button:hover .o_audit_card_muted .o_audit_kpi_hint_icon {
+    color: #4b5563;
+}
+
+/* ================================
+   Control Center â†” Workplan CTA
+   Shared navigation cards
+================================ */
+.o_audit_dashboard_cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 20px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.o_audit_dashboard_cta--forward {
+    border-color: #1e3a8a;
+    background: linear-gradient(110deg, #0f172a 0%, #1e3a8a 48%, #2563eb 100%);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.o_audit_dashboard_cta--forward .o_audit_dashboard_cta_title,
+.o_audit_dashboard_cta--forward .o_audit_dashboard_cta_icon {
+    color: #ffffff;
+}
+
+.o_audit_dashboard_cta--forward .o_audit_dashboard_cta_subtitle {
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.o_audit_dashboard_cta--forward .o_audit_dashboard_cta_icon {
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: none;
+}
+
+.o_audit_dashboard_cta_secondary,
+.o_audit_dashboard_cta--return {
+    border-color: #e2e8f0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 40%, #ffffff 100%);
+}
+
+.o_audit_dashboard_cta_content {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+.o_audit_dashboard_cta_text {
+    min-width: 0;
+    flex: 1;
+}
+
+.o_audit_dashboard_cta_icon {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px !important;
+    color: #2563eb;
+    background: #eff6ff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.o_audit_dashboard_cta--return .o_audit_dashboard_cta_icon {
+    color: #475569;
+    background: #e2e8f0;
+}
+
+.o_audit_dashboard_cta_title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.o_audit_dashboard_cta_subtitle {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #64748b;
+    max-width: 52ch;
+}
+
+.o_audit_dashboard_cta_button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.o_audit_dashboard_cta_action {
+    min-width: 9.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+/* ================================
+   Workplan â€œexecution workspaceâ€
+================================ */
+.o_audit_workspace {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.o_audit_workspace_hero {
+    margin-bottom: 8px;
+    padding: 4px 4px 16px 4px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.o_audit_workspace_hero_title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.o_audit_workspace_hero_subtitle {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #64748b;
+    max-width: 60ch;
+}
+
+.o_audit_workspace_body {
+    padding-top: 8px;
+}
+
+/* Card + action button split (no field inside <button>) */
+.o_audit_workplan_card_wrap {
+    min-width: 0;
+}
+
+.o_audit_workplan_card_wrap .o_audit_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+    flex: 1 1 auto;
+}
+
+.o_audit_workplan_action {
+    flex-shrink: 0;
+}
+
+.o_audit_kpi_tile_action {
+    flex-shrink: 0;
+}
+
+.o_audit_workspace_section .o_audit_section_title {
+    margin-bottom: 6px;
+}
+
+.o_audit_workspace_section_hint {
+    margin: 0 0 12px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #6b7280;
+    max-width: 65ch;
+}
+
+/* Per-card â€œClick to openâ€ (Workplan action buttons) */
+.o_audit_click_hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    width: 100%;
+    font-size: 11px;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.o_audit_click_hint .fa {
+    font-size: 12px !important;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.o_audit_kpi_button:hover .o_audit_click_hint {
+    color: #111827;
+}
+
+.o_audit_kpi_button:hover .o_audit_click_hint .fa {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+    .o_audit_control_center {
+        padding: 16px;
+    }
+
+    .o_audit_control_hero_title {
+        font-size: 18px;
+    }
+
+    .o_audit_control_grid_single .o_audit_kpi_block {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .audit-dashboard {
+        padding: 10px;
+    }
+
+    .o_audit_card {
+        min-height: 100px;
+        padding: 12px;
+    }
+
+    .o_audit_icon {
+        width: 32px;
+        height: 32px;
+        font-size: 14px !important;
+    }
+
+    .o_audit_dashboard_cta {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+    }
+
+    .o_audit_dashboard_cta_content {
+        align-items: center;
+    }
+
+    .o_audit_dashboard_cta_icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px !important;
+    }
+
+    .o_audit_dashboard_cta_button {
+        justify-content: stretch;
+    }
+
+    .o_audit_dashboard_cta_action {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .o_audit_workspace_hero_title {
+        font-size: 18px;
+    }
+}
+/* Legacy workplan RTL — scoped to named shells only (not webclient) */
+body.o_rtl .audit-dashboard {
+    direction: rtl;
+    text-align: right;
+}
+
+body.o_rtl .o_audit_kpi_row,
+body.o_rtl .o_audit_control_kpi_row {
+    direction: rtl;
+}
+
+body.o_rtl .o_audit_dashboard_cta_content {
+    text-align: right;
+}
+
+/* OWL Executive Dashboard RTL: static/src/scss/audit_dashboard.scss */

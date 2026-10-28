@@ -1,0 +1,3362 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* auditflow_standard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e-20251022\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-27 20:40+0000\n"
+"PO-Revision-Date: 2026-04-27 20:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: model:ir.actions.client,name:auditflow_standard.auditflow_dashboard_action
+#: model:ir.ui.menu,name:auditflow_standard.menu_auditflow_dashboard
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Executive Dashboard"
+msgstr "لوحة القيادة التنفيذية"
+
+#. module: auditflow_standard
+#: model:ir.actions.report,print_report_name:auditflow_standard.action_report_audit_engagement
+msgid "'Audit operation - %s' % (object.name)"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_issue_warning_wizard_form
+msgid ""
+"<strong class=\"d-block o_form_label\">This engagement is not ready to "
+"issue.</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong> End:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong>Entity under review:</strong>"
+msgstr "<strong>الجهة محل المراجعة:</strong>"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong>Audit team:</strong>"
+msgstr "<strong>فريق المراجعة:</strong>"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+msgid "<strong>Client:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong>Company:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+msgid "<strong>End:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong>Lead reviewer:</strong>"
+msgstr "<strong>المراجع المسؤول:</strong>"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+msgid "<strong>Progress:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong>Reference:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong>Start:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "<strong>Status:</strong>"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg2_inreview
+msgid ""
+"Introduce a visible approval status, named settlement owner, and escalation "
+"rule for overdue payment exceptions."
+msgstr ""
+"إدخال حالة اعتماد واضحة ومالك تسوية مُسمّى وقاعدة تصعيد لاستثناءات الدفع "
+"المتأخرة."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg4_sod
+msgid "A dedicated window to refresh roles with a hard deadline."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg4_access
+msgid ""
+"A deferred access request remained beyond the default duration without a "
+"reminder to the owner."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg5_cycle_high
+msgid "A lighter template for unlabeled goods."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg2_payment
+msgid ""
+"Hero Case CF-001: A payment was released although the purchase order, "
+"receipt confirmation, and invoice validation were not fully aligned. Similar"
+" exceptions were observed across more than one payment sample, indicating a "
+"control pattern rather than an isolated case."
+msgstr ""
+"الحالة النموذجية CF-001: صُرِفَت دفعة رغم أن أمر الشراء وتأكيد الاستلام "
+"والتحقق من الفاتورة لم يكونوا متوافقين بالكامل. وُجِدت استثناءات مماثلة في "
+"أكثر من عيّنة دفع، ما يشير إلى نمط رقابي وليس حالة معزولة."
+
+#. module: auditflow_standard
+#: model:audit.indicator.stable,name:auditflow_standard.demo_indicator_2
+msgid "Access Controls - GL"
+msgstr "ضوابط الوصول – الدفتر العام"
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg1_vendor_closed
+msgid "Acknowledged as closed after register verification."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg2_closed
+msgid "Acknowledgment of correct execution and closure."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_needaction
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_needaction
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_needaction
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_needaction
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_needaction
+msgid "Action Needed"
+msgstr "ما يجب تنفيذه"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__action_plan
+msgid "Action Plan"
+msgstr "خطة العمل"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__target_date
+msgid "Action Target Date"
+msgstr "التاريخ المستهدف لخطة العمل"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Action plan"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Action plan & response"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_exception_decoration
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_exception_decoration
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_exception_decoration
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_exception_decoration
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_state
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_state
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_state
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_state
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_type_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_type_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_type_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_type_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg2_closed
+msgid "Administrative close with filed verification form."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_engagement
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_engagement_all
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_engagements
+msgid "All Audit Operations"
+msgstr "جميع عمليات المراجعة"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_finding
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_findings_all
+msgid "All review results"
+msgstr "جميع نتائج المراجعة"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "All report readiness checks passed."
+msgstr "اجتازت جميع فحوص جاهزية التقرير."
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg3_hr_offboarding_critical
+msgid ""
+"An account tied to a prior role remained active for two working days after a"
+" transfer was issued."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg3_inreview
+msgid "An approval status flag inside the payroll flow."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_section_analytics
+msgid "Analytics"
+msgstr "تحليلات المراجعة"
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg2_inreview
+msgid ""
+"Management approved the escalation workshop and assigned Finance as the "
+"accountable owner for settlement closure."
+msgstr ""
+"أقرت الإدارة ورشة التصعيد وحدّدت الشؤون المالية مالكاً مسؤولاً عن إغلاق "
+"التسوية."
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg1_vendor_closed
+msgid "Archive the verification form and close the finding."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.task.stable,name:auditflow_standard.demo_task_1
+msgid "Assess control design - Revenue"
+msgstr "تقييم تصميم الرقابة – الإيرادات"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__assigned_to
+msgid "Assigned To"
+msgstr "مُسند إلى"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_attachment_count
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_attachment_count
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_attachment_count
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_attachment_count
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__attachment_ids
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_dashboard_kpi.py:0
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_dashboard_kpi
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard_kpi_form
+msgid "Metrics snapshot"
+msgstr "لمحة المؤشرات"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_dashboard_stable
+msgid "Audit Dashboard"
+msgstr "لوحة التشغيل"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_engagement
+msgid "Audit Operation"
+msgstr "عملية مراجعة"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_engagement_issue_warning_wizard
+msgid "Audit Operation Issue Warning Wizard"
+msgstr "معالج تحذير إصدار التقرير لعملية المراجعة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_search
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_tree
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_section_engagements
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_pivot
+msgid "Audit Operations"
+msgstr "عمليات المراجعة"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_finding
+msgid "Audit review result"
+msgstr "نتيجة مراجعة"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_dashboard_kpi
+msgid "Audit Health KPIs (snapshot)"
+msgstr "مؤشرات صحة المراجعة (لمحة)"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_indicator_stable
+msgid "Audit Indicator / KRI"
+msgstr "مؤشر مراجعة"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_indicator
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_indicator_tree
+msgid "Audit Indicators"
+msgstr "مؤشرات المراجعة"
+
+#. module: auditflow_standard
+#: model:res.groups,name:auditflow_standard.group_audit_manager
+msgid "Audit Manager"
+msgstr "مدير المراجعة الداخلية"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_plan_stable
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+msgid "Audit Plan"
+msgstr "خطة مراجعة"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_plan
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_plans
+#: model:portal.entry,name:auditflow_standard.portal_entry_audit_plans
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_my_audit
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_tree
+msgid "Audit Plans"
+msgstr "خطط المراجعة"
+
+#. module: auditflow_standard
+#: model:ir.actions.report,name:auditflow_standard.action_report_audit_engagement
+msgid "Audit Report"
+msgstr "تقرير المراجعة"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_task_stable
+msgid "Audit Task / Procedure"
+msgstr "مهمة/إجراء مراجعة"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_task
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_task_tree
+msgid "Audit Tasks"
+msgstr "مهام المراجعة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__engagement_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__engagement_id
+msgid "Audit operation"
+msgstr "عملية مراجعة"
+
+#. module: auditflow_standard
+#: model:res.groups,name:auditflow_standard.group_audit_auditee
+msgid "Auditee (Portal)"
+msgstr "الجهة محل المراجعة (بوابة)"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__auditee_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__client_id
+msgid "Entity Under Review"
+msgstr "الجهة محل المراجعة"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Entity under review is required for report readiness."
+msgstr "يُشترط تحديد الجهة محل المراجعة لجاهزية التقرير."
+
+#. module: auditflow_standard
+#: model:res.groups,name:auditflow_standard.group_audit_auditor
+msgid "Auditor"
+msgstr "المراجع"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Reviewer"
+msgstr "المراجع"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__auditor_ids
+msgid "Audit Team"
+msgstr "فريق المراجعة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__name
+msgid "Auto-generated via sequence when left blank."
+msgstr "يُولَّد تلقائياً عبر التسلسل عند تركه فارغاً."
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg4_access
+msgid "Automatic revocation of temporary access (open)"
+msgstr "إلغاء تلقائي للوصول المؤقت (مفتوح)"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__avg_score
+msgid "Average Indicator Score (%)"
+msgstr "متوسط مؤشرات (%)"
+
+#. module: auditflow_standard
+#: model_terms:audit.indicator.stable,description:auditflow_standard.demo_indicator_5
+msgid "Average days open for audit findings"
+msgstr "متوسط أيام بقاء نتائج المراجعة مفتوحة"
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg3_inreview
+msgid "Backlog of approval samples with no progress indicator."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__baseline
+msgid "Baseline"
+msgstr "خط أساس"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg5_doc_low
+msgid "Bin location labels out of order (closed — low)"
+msgstr "تسميات مواقع التخزين غير مرتّبة (مغلق — منخفض)"
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg2_payment
+msgid ""
+"Block payment release until the three-way match is complete and exception "
+"approval is formally documented."
+msgstr ""
+"منع صرف الدفعات حتى اكتمال المطابقة الثلاثية وتوثيق اعتماد الاستثناء رسمياً."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__impact
+msgid "Business Impact (narrative)"
+msgstr "تأثير أعمال (وصفي)"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Business impact..."
+msgstr "تأثير أعمال..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_issue_warning_wizard_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__state__cancelled
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__status__cancelled
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_plan_stable__state__cancel
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__score
+msgid "Capped at 100%. Computed as current_value / target * 100."
+msgstr "محدد عند 100٪. يُحسب كقيمة حالية/مستهدف × 100."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__category
+msgid "Category"
+msgstr "الفئة"
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg5_doc_low
+msgid "Change approved."
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Check report readiness"
+msgstr "التحقق من جاهزية التقرير"
+
+#. module: auditflow_standard
+#: model:res.groups,name:auditflow_standard.group_audit_cae
+msgid "Chief Audit Executive"
+msgstr "رئيس المراجعة الداخلية (CAE)"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__state__closed
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__status__closed
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_findings_closed
+#: model:ir.actions.act_window,name:auditflow_standard.action_closed_findings_kpi
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__closed_finding_count
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_closed_findings
+msgid "Closed review results"
+msgstr "نتائج مراجعة مغلقة"
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg1_vendor_closed
+msgid ""
+"Closed after a dual check list was applied when registering a new vendor or "
+"service provider."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg2_closed
+msgid "Closed after the approval form was aligned with the live process."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__color
+msgid "Color"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__color
+msgid "Color Index"
+msgstr "لون (فهرس)"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__company_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__company_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__company_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__company_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: auditflow_standard
+#: model:audit.engagement,scope:auditflow_standard.demo_audit_engagement_itaccess
+msgid ""
+"Compare user entitlements in critical systems to the approved access matrix,"
+" including the impact of organizational change."
+msgstr ""
+"مقارنة استحقاقات المستخدمين في الأنظمة الحرجة بمصفوفة الوصول المعتمدة، بما "
+"في ذلك أثر التغيير التنظيمي."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_indicator_stable__category__compliance
+msgid "Compliance"
+msgstr "الامتثال"
+
+#. module: auditflow_standard
+#: model:audit.engagement,objectives:auditflow_standard.demo_audit_engagement_itaccess
+msgid ""
+"Confirm that periodic review exists and that every access change has a "
+"documented request and revocation path."
+msgstr ""
+"التأكد من وجود مراجعة دورية وأن كل تغيير وصول له طلب موثق ومسار إلغاء."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg3_hr_separation
+msgid "Confirmation of closure with documented fix."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg5_count_critical
+msgid "Confirmed variance; recount with management approvals."
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_indicator_stable__category__control_design
+msgid "Control Design"
+msgstr "تصميم الضوابط"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_indicator_stable__category__control_operational
+msgid "Control Operational"
+msgstr "تشغيل الضوابط"
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg5_doc_low
+msgid "Corrected storage location numbers with no financial effect."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_kpi__create_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__create_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__create_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__create_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__create_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__create_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__create_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_kpi__create_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__create_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__create_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__create_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__create_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__create_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__create_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_rating__critical
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__severity__critical
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Critical"
+msgstr "حرج"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_findings_critical
+#: model:ir.actions.act_window,name:auditflow_standard.action_critical_findings_kpi
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__critical_finding_count
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "Critical review results"
+msgstr "نتائج مراجعة حرجة"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_finding.py:0
+msgid "Critical review results must have a target execution date."
+msgstr "يجب أن يكون لنتائج المراجعة الحرجة تاريخ تنفيذ مستهدف."
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_finding.py:0
+msgid "Critical review results must have an accountable owner."
+msgstr "يجب أن يكون لنتائج المراجعة الحرجة مسؤول عن التنفيذ."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__current_value
+msgid "Current Value"
+msgstr "القيمة الحالية"
+
+#. module: auditflow_standard
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_section_dashboard
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#. module: auditflow_standard
+#: model_terms:audit.indicator.stable,description:auditflow_standard.demo_indicator_4
+msgid "Days to reconcile bank accounts"
+msgstr "أيام تسوية الحسابات البنكية"
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg5_cycle_high
+msgid "Delayed receipt documentation affected the stock-turn KPI."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg1_auth
+msgid "Delayed update of the delegation table after a job title change."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg4_sod
+msgid "Delayed update of the role matrix after a team reorganization."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg3_inreview
+msgid "Delays linking a half-year bonus to a formally archived approval."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg2_inreview
+msgid ""
+"Hero Case CF-001: Settlement approvals remained pending without a logged "
+"reason, delaying closure of the critical payment exception and increasing "
+"management exposure."
+msgstr ""
+"الحالة النموذجية CF-001: بقيت اعتمادات التسوية قيد الانتظار دون تسجيل سبب، "
+"ما أخر إغلاق استثناء الدفع الحرج وزاد تعرّض الإدارة."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Describe the review result..."
+msgstr "صف نتيجة المراجعة..."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__description
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__description
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_indicator_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg3_hr_offboarding_critical
+msgid ""
+"Developer access not disabled after internal transfer (critical — closed)"
+msgstr "لم يُعطَّل وصول المطوّر بعد نقل داخلي (حرج — مغلق)"
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg1_auth
+msgid "Directive to update the delegation table during the current quarter."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_kpi__display_name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__display_name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__display_name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__display_name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__display_name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__display_name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__display_name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__status__done
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_plan_stable__state__done
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_task_stable__status__done
+msgid "Done"
+msgstr "منجز"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__done_plans
+msgid "Done Plans"
+msgstr "الخطط المنجزة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__state__draft
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_plan_stable__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Due"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__due_date
+msgid "Target Execution Date"
+msgstr "تاريخ التنفيذ المستهدف"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__due_date
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "Due Soon"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__due_soon_finding_count
+msgid "Due soon review results"
+msgstr "نتائج مراجعة مستحقّة قريبًا"
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg3_hr_separation
+msgid ""
+"Duties changed without a timely HR system update; corrected in the next "
+"cycle."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg1_vendor_closed
+msgid "Embed instructions in the vendor master guide."
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_my_audit
+msgid "End"
+msgstr "النهاية"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__end_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__end_date
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_plan.py:0
+msgid "End Date cannot be before Start Date."
+msgstr "لا يمكن أن يكون تاريخ النهاية قبل تاريخ البداية."
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_engagement_dashboard
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_engagement_dashboard
+msgid "Operations overview"
+msgstr "نظرة عامة على عمليات المراجعة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Review objectives..."
+msgstr "أهداف المراجعة..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Review scope..."
+msgstr "نطاق المراجعة..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard_kpi_form
+msgid "Audit operations and readiness"
+msgstr "عمليات المراجعة والجاهزية"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_graph
+msgid "Audit operations by status"
+msgstr "عمليات المراجعة حسب الحالة"
+
+#. module: auditflow_standard
+#: model:audit.engagement,objectives:auditflow_standard.demo_audit_engagement_hr
+msgid ""
+"Ensure software entitlements are removed on exit and that salary and "
+"allowance changes are supported by a clear delegation of authority."
+msgstr ""
+"التأكد من إلغاء حقوق البرمجيات عند المغادرة وأن تغييرات الراتب والبدلات "
+"مدعومة بتفويض سلطة واضح."
+
+#. module: auditflow_standard
+#: model_terms:audit.indicator.stable,description:auditflow_standard.demo_indicator_1
+msgid "Evaluate segregation of duties in revenue cycle"
+msgstr "تقييم فصل المهام في دورة الإيرادات"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Evidence"
+msgstr "الأدلة والمرفقات الداعمة"
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg4_access
+msgid "Extended temporary amounts longer than intended."
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__state__fieldwork
+msgid "Fieldwork"
+msgstr "أعمال ميدانية"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__name
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Review result"
+msgstr "نتيجة المراجعة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__finding_count
+msgid "Finding Count"
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Review result “%s” must include severity level and status."
+msgstr "يجب أن تتضمّن نتيجة المراجعة «%s» مستوى الخطورة والحالة بوضوح."
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__finding_ids
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_section_findings
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_list
+msgid "Review results"
+msgstr "نتائج المراجعة"
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg5_doc_low
+msgid "Fix and file."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg3_inreview
+msgid "Fixed meeting time and a named follow-up owner."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_follower_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_follower_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_follower_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_follower_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_partner_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_partner_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_partner_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_partner_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__activity_type_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__activity_type_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__activity_type_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__activity_type_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_issue_warning_wizard_form
+msgid "Force Issue Anyway"
+msgstr "إصدار رغم ذلك"
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg3_hr_separation
+msgid "Formal system entry and closure of the exception log."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg5_count_critical
+msgid "Freeze count entry until related issue runs are complete."
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "Group by audit operation"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "Group by Risk"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "Group by Severity"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "Group by Status"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__has_message
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__has_message
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__has_message
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__has_message
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_impact__high
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_likelihood__high
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_rating__high
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__severity__high
+msgid "High"
+msgstr "مرتفع"
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg5_count_critical
+msgid "High book value on the shelf not confirmed in the period."
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "High risk (rating)"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_kpi__id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__id
+msgid "ID"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_exception_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_exception_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_exception_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_exception_icon
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__activity_exception_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__activity_exception_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__activity_exception_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__activity_exception_icon
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.engagement,objectives:auditflow_standard.demo_audit_engagement_payments
+msgid ""
+"Identify payments completed without a full three-way match and test the "
+"effectiveness of authorization and review of due transfers."
+msgstr ""
+"تحديد المدفوعات المنجزة دون مطابقة ثلاثية كاملة واختبار فعالية التفويض "
+"ومراجعة التحويلات المستحقة."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__message_needaction
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__message_needaction
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__message_needaction
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__message_needaction
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__message_has_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__message_has_sms_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__message_has_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__message_has_sms_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__message_has_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__message_has_sms_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__message_has_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__message_has_sms_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__message_has_error
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg3_hr_offboarding_critical
+msgid "Immediate disable and a small committee to monitor compliance."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__risk_impact
+msgid "Impact (risk)"
+msgstr "تأثير (المخاطر)"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_plan_stable__state__open
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_task_stable__status__in_progress
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__status__in_review
+msgid "In Review"
+msgstr "قيد المراجعة"
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg3_hr_offboarding_critical
+msgid "Incomplete handover checklist linked to entitlements for transfers."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg1_doc_po
+msgid "Control breakdown: incomplete PO documentation"
+msgstr "انقطاع الرقابة: توثيق أمر الشراء غير مكتمل"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__name
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_indicator_form
+msgid "Indicator"
+msgstr "مؤشر"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__indicator_ids
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_indicators
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+msgid "Indicators"
+msgstr "المؤشرات"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Inherent risk"
+msgstr "المخاطر الكامنة"
+
+#. module: auditflow_standard
+#: model:ir.module.category,name:auditflow_standard.module_category_smart_audit
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_root
+#: model:res.groups.privilege,name:auditflow_standard.res_groups_privilege_smart_audit
+msgid "Internal Audit"
+msgstr "المراجعة الداخلية"
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg1_auth
+msgid "Internal policy breach and a potential request for justification."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.engagement,scope:auditflow_standard.demo_audit_engagement_inventory
+msgid ""
+"Inventory counts, receipt and issue movements, adjustments, and link to "
+"financial postings."
+msgstr "جرد المخزون وحركات الاستلام والصرف والتسويات والربط بالقيود المالية."
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg1_doc_po
+msgid ""
+"Hero Case CF-001: Purchase orders were approved while receipt evidence and "
+"technical sign-off were incomplete. This created the first weak point in the"
+" payment control chain."
+msgstr ""
+"الحالة النموذجية CF-001: وُقعت على أوامر شراء رغم أن أدلة الاستلام والاعتماد"
+" الفني للمواصفات لم تكن مكتملة. وهذا شكّل أول نقطة ضعف في سلسلة رقابة الدفع."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__is_due_soon
+msgid "Is Due Soon"
+msgstr "مستحق قريبًا؟"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_is_follower
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_is_follower
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_is_follower
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_is_follower
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__is_overdue
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard_kpi_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_search
+msgid "Overdue"
+msgstr "متأخرة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Issue Report"
+msgstr "إصدار التقرير"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_issue_warning_wizard_form
+msgid "Issue Report Warning"
+msgstr "تنبيه عند إصدار التقرير"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__state__issued
+msgid "Issued"
+msgstr "صادر"
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg3_hr_separation
+msgid "Job card update lagging behind actual assignment."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg3_inreview
+msgid "Joint session to review the KPI and approve the change."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg3_inreview
+msgid "KPI alignment with approvals (in review — overdue)"
+msgstr "مواءمة مؤشرات الأداء مع الاعتمادات (قيد المراجعة — متأخرة)"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_kpi__write_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__write_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__write_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__write_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__write_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__write_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__write_uid
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_kpi__write_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__write_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__write_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__write_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__write_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__write_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__write_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__lead_auditor_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__lead_auditor_id
+msgid "Lead Reviewer"
+msgstr "المراجع المسؤول"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Lead reviewer is required for report readiness."
+msgstr "يُشترط تحديد المراجع المسؤول لجاهزية التقرير."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__risk_likelihood
+msgid "Likelihood"
+msgstr "الاحتمالية"
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg1_vendor_closed
+msgid "Limited after adjustment."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg2_closed
+msgid "Limited after correction."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg5_doc_low
+msgid "Limited to movement inside the warehouse."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg3_hr_separation
+msgid "Limited with confirmed correction."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg1_doc_po
+msgid ""
+"Enforce mandatory receipt evidence, technical sign-off, and PO completeness "
+"before any invoice can move to payment review."
+msgstr ""
+"فرض إلزامية أدلة الاستلام والاعتماد الفني واكتمال أمر الشراء قبل أن تنتقل أي"
+" فاتورة إلى مراجعة الدفع."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg3_hr_offboarding_critical
+msgid "List approved and evidence of a follow-up test in the next period."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg4_access
+msgid "Lock in a test plan after restore."
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_impact__low
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_likelihood__low
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_rating__low
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__severity__low
+msgid "Low"
+msgstr "منخفض"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__management_response
+msgid "Management Response"
+msgstr "رد الإدارة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Management response"
+msgstr "رد الإدارة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Management response to this review result..."
+msgstr "رد الإدارة على نتيجة المراجعة هذه..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_task_form
+msgid "Mark Done"
+msgstr "تعليم كمنجز"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg5_count_critical
+msgid "Material variance in a high-value storage line (closed — critical)"
+msgstr "فروق مادية في خط تخزين عالٍ القيمة (مغلق — حرج)"
+
+#. module: auditflow_standard
+#: model_terms:audit.indicator.stable,description:auditflow_standard.demo_indicator_3
+msgid "Measure compliance with expense policy"
+msgstr "قياس الامتثال لسياسة المصاريف"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_impact__medium
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_likelihood__medium
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__risk_rating__medium
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__severity__medium
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement_issue_warning_wizard__message
+msgid "Message"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_has_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_has_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_has_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_has_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Mgmt response"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg1_doc_po
+msgid ""
+"Mandatory verification controls were not enforced before moving purchase "
+"documents toward payment approval."
+msgstr ""
+"لم تُفعَّل ضوابط التحقّق الإلزامية قبل تقديم مستندات المشتريات نحو اعتماد "
+"الدفع."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Move to Reporting"
+msgstr "الانتقال للتقارير"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__my_activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__my_activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__my_activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__my_activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard
+msgid "Navigation"
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+#: code:addons/auditflow_standard/models/audit_plan.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/controllers/portal.py:0
+msgid "Newest"
+msgstr "الأحدث"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_date_deadline
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_summary
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_summary
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_summary
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_summary
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_type_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_type_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_type_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_type_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_audit_plan
+msgid "No indicators have been published for this plan."
+msgstr "لم يُنشر أي مؤشر لهذه الخطة."
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg5_cycle_high
+msgid "No template for urgent receipt."
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__is_not_ready
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__readiness_label__not_ready
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Not Ready"
+msgstr "غير جاهز"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__not_ready_flag_count
+msgid "Not Ready (stat)"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_not_ready_engagements
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_not_ready_engagements
+msgid "Operations Not Report-Ready"
+msgstr "عمليات غير جاهزة للتقرير"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__note
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_task_form
+msgid "Note"
+msgstr "مذكرة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_needaction_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_needaction_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_needaction_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_needaction_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_has_error_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_has_error_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_has_error_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_has_error_counter
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__message_needaction_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__message_needaction_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__message_needaction_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__message_needaction_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__message_has_error_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__message_has_error_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__message_has_error_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__message_has_error_counter
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__objectives
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Objectives"
+msgstr "الأهداف"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Objectives are required for report readiness."
+msgstr "الأهداف مطلوبة لجاهزية إصدار التقرير."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_finding__status__open
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_findings_open
+#: model:ir.actions.act_window,name:auditflow_standard.action_open_findings_kpi
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__open_finding_count
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_open_findings
+msgid "Open review results"
+msgstr "نتائج مراجعة مفتوحة"
+
+#. module: auditflow_standard
+#: model:audit.indicator.stable,name:auditflow_standard.demo_indicator_5
+msgid "Open Issues Aging"
+msgstr "عتقة القضايا المفتوحة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__open_plans
+msgid "Open Plans"
+msgstr "الخطط المفتوحة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__open_tasks
+msgid "Open Tasks"
+msgstr "المهام المفتوحة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard_kpi_form
+msgid ""
+"Use Executive Dashboard under Dashboard, or open registers from Engagements "
+"and Findings in the app menu."
+msgstr ""
+"استخدم لوحة التحكم التنفيذية ضمن «لوحة التحكم»، أو افتح السجلات من «عمليات "
+"المراجعة» و«نتائج المراجعة» في قائمة التطبيق."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard
+msgid ""
+"Open audit operation lists from the Audit Operations section in the app "
+"menu."
+msgstr "افتح قوائم عمليات المراجعة من قسم «عمليات المراجعة» في قائمة التطبيق."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard
+msgid "Open finding lists from the Findings section in the app menu."
+msgstr "افتح قوائم نتائج المراجعة من قسم «نتائج المراجعة» في قائمة التطبيق."
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Open review result “%s” must have a management response."
+msgstr "يجب أن تتضمّن نتيجة المراجعة المفتوحة «%s» رد الإدارة."
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Open review result “%s” must have a responsible person."
+msgstr "يجب تحديد مسؤول تنفيذ الإجراء التصحيحي لنتيجة المراجعة المفتوحة «%s»."
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Open review result “%s” must have a target date."
+msgstr "يجب أن يكون لنتيجة المراجعة المفتوحة «%s» تاريخ مستهدف للتنفيذ."
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Open review result “%s” must have an action plan."
+msgstr "يجب أن تتضمّن نتيجة المراجعة المفتوحة «%s» خطة عمل تصحيحية."
+
+#. module: auditflow_standard
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_ops
+msgid "Audit Management"
+msgstr "إدارة المراجعة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#. odoo-python
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_findings_overdue
+#: model:ir.actions.act_window,name:auditflow_standard.action_overdue_findings
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__overdue_finding_count
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_overdue_findings
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Overdue review results"
+msgstr "نتائج مراجعة متأخرة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__overdue_tasks
+msgid "Overdue Tasks"
+msgstr "المهام المتأخرة"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg1_vendor_closed
+msgid "Overlapping vendor master data (closed)"
+msgstr "تداخل بيانات رئيسية للمورد (مغلق)"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__owner_id
+msgid "Accountable owner"
+msgstr "المسؤول عن التنفيذ"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__responsible_id
+msgid "Owner of the corrective / action plan."
+msgstr "مسؤول عن الإجراء التصحيحي/خطة العمل."
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg2_payment
+msgid "Critical payment released without full three-way match"
+msgstr "دفعة حرجة صُرفت دون اكتمال المطابقة الثلاثية"
+
+#. module: auditflow_standard
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_task_stable__status__pending
+msgid "Pending"
+msgstr "معلق"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__progress
+msgid "Percentage of tasks in 'Done' state."
+msgstr "نسبة المهام في حالة \"منجز\"."
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg3_hr_separation
+msgid "Periodic match of title to assignment."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__plan_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__plan_id
+msgid "Plan"
+msgstr "الخطة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Planned remediation..."
+msgstr "الإجراءات التصحيحية المخطط لها..."
+
+#. module: auditflow_standard
+#: model:audit.indicator.stable,name:auditflow_standard.demo_indicator_3
+msgid "Policy Compliance - Expense"
+msgstr "الامتثال للسياسة – المصاريف"
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg3_hr_offboarding_critical
+msgid "Potential dual use of application access."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg1_doc_po
+msgid ""
+"Incomplete documentation exposed the company to unsupported payments and "
+"weakened audit evidence for procurement approvals."
+msgstr ""
+"أدى نقص التوثيق إلى تعريض الشركة لمدفوعات غير مدعومة بالمستندات وإضعاف أدلة "
+"المراجعة لاعتمادات المشتريات."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_my_audit
+msgid "Progress"
+msgstr "التقدم"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__progress
+msgid "Progress (%)"
+msgstr "التقدم (%)"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg1_auth
+msgid "Purchasing approval outside authority limits"
+msgstr "اعتماد مشتريات خارج حدود الصلاحية"
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg5_count_critical
+msgid "Quantity posted without a linked issue movement."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg5_cycle_high
+msgid "Quick training for the warehouse team confirmed."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg4_access
+msgid "Re-enable reminders and stress auto-close."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg4_sod
+msgid "Re-map the workflow in a test environment, then go live."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__report_readiness_message
+msgid "Readiness"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__readiness_label
+msgid "Readiness (chart)"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_issue_warning_wizard_form
+msgid "Readiness details..."
+msgstr "تفاصيل الجاهزية..."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__readiness_label__ready
+msgid "Ready"
+msgstr "جاهز"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_engagement_ready
+msgid "Ready for Report"
+msgstr "جاهز للتقرير"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__recommendation
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Recommendation"
+msgstr "التوصية"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Recommended corrective action..."
+msgstr "الإجراء التصحيحي المقترح..."
+
+#. module: auditflow_standard
+#: model:audit.indicator.stable,name:auditflow_standard.demo_indicator_4
+msgid "Reconciliation Timeliness - Bank"
+msgstr "مواعيد التسوية – البنوك"
+
+#. module: auditflow_standard
+#: model:audit.engagement,objectives:auditflow_standard.demo_audit_engagement_inventory
+msgid "Reduce stock variances and strengthen approval of count differences."
+msgstr "تقليل فروقات المخزون وتعزيز اعتماد فروقات الجرد."
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/controllers/portal.py:0
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__name
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__name
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_my_audit
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+msgid "Reference"
+msgstr "مرجع"
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg4_access
+msgid "Reminder feature temporarily disabled during a platform upgrade."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__report_ready
+msgid "Report Ready"
+msgstr "جاهز للتقرير"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_report_ready_engagements
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_report_ready_engagements
+msgid "Report-ready operations"
+msgstr "عمليات جاهزة للتقرير"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_graph_readiness
+msgid "Report readiness"
+msgstr "جاهزية إصدار التقرير"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_engagement__state__reporting
+msgid "Reporting"
+msgstr "إعداد التقارير"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+msgid "Reset to Draft"
+msgstr "إرجاع إلى مسودة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__responsible_id
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Corrective action owner"
+msgstr "مسؤول الإجراء التصحيحي"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__activity_user_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__activity_user_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__activity_user_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__activity_user_id
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard
+msgid ""
+"Open Executive Dashboard from Dashboard in the app menu, or use Engagements "
+"and Findings below."
+msgstr ""
+"افتح لوحة التحكم التنفيذية من لوحة التحكم في قائمة التطبيق، أو استخدم عمليات"
+" المراجعة ونتائج المراجعة أدناه."
+
+#. module: auditflow_standard
+#: model_terms:audit.indicator.stable,description:auditflow_standard.demo_indicator_2
+msgid "Review access privileges to General Ledger"
+msgstr "مراجعة امتيازات الوصول إلى الدفتر العام"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_issue_warning_wizard_form
+msgid ""
+"Review the readiness details below. You can cancel, or use Force Issue "
+"Anyway to override the checks."
+msgstr ""
+"راجع تفاصيل الجاهزية أدناه. يمكنك الإلغاء، أو استخدام «إصدار رغم ذلك» لتجاوز"
+" التحققات."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields.selection,name:auditflow_standard.selection__audit_indicator_stable__category__risk
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Risk"
+msgstr "المخاطر"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__risk_rating
+msgid "Risk Rating"
+msgstr "تقييم المخاطر"
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg2_payment
+msgid "Risk of payment without a full three-way match."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg4_sod
+msgid "Risk that amounts pass two stages without early detection."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.module.category,description:auditflow_standard.module_category_smart_audit
+msgid "Role-based access for the Internal Audit function."
+msgstr "وصول مبني على الأدوار لوظيفة المراجعة الداخلية."
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg5_cycle_high
+msgid "Roll out the urgent receipt form."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__root_cause
+msgid "Root Cause"
+msgstr "السبب الجذري"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Root Cause & Impact"
+msgstr "السبب الجذري والتأثير"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "Root cause analysis..."
+msgstr "تحليل السبب الجذري..."
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg5_count_critical
+msgid "Run an admin adjustment and retest the line on the next count."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg3_hr_offboarding_critical
+msgid ""
+"Run an auto-sync list between a person’s transfer and account disablement."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__message_has_sms_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__message_has_sms_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__message_has_sms_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__message_has_sms_error
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.engagement,scope:auditflow_standard.demo_audit_engagement_hr
+msgid ""
+"Sample hiring, attendance, offboarding, and system access linked to employee"
+" records."
+msgstr ""
+"عيّنة التوظيف والحضور وإنهاء الخدمة والوصول للأنظمة المرتبطة بسجلات "
+"الموظفين."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__scope
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Scope"
+msgstr "النطاق"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__description
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+msgid "Review scope & objectives"
+msgstr "نطاق المراجعة وأهدافها"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Scope is required for report readiness."
+msgstr "النطاق مطلوب لجاهزية إصدار التقرير."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__score
+msgid "Score (%)"
+msgstr "النقاط (%)"
+
+#. module: auditflow_standard
+#: model:audit.indicator.stable,name:auditflow_standard.demo_indicator_1
+msgid "Segregation of Duties - Revenue"
+msgstr "فصل المهام – الإيرادات"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg4_sod
+msgid "Segregation tied to access matrix (open — target overdue)"
+msgstr "الفصل الوظيفي مرتبط بمصفوفة الوصول (مفتوح — هدف متأخر)"
+
+#. module: auditflow_standard
+#: model:res.groups,name:auditflow_standard.group_audit_senior_auditor
+msgid "Senior Auditor"
+msgstr "مدقق أول"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__sequence
+msgid "Sequence"
+msgstr "الترقيم"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg2_inreview
+msgid "Delayed settlement approval for unmatched payments"
+msgstr "تأخير اعتماد التسوية للمدفوعات غير المتطابقة"
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg2_inreview
+msgid ""
+"Settlement ownership changed without formal handover or workflow visibility "
+"in the system."
+msgstr ""
+"تغيّرت مسؤولية التسوية دون تسليم رسمي أو وضوح المسار في سير العمل بالنظام."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__severity
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Severity"
+msgstr "مستوى الخطورة"
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg2_inreview
+msgid ""
+"Finance and Procurement will standardize the settlement path, assign a "
+"single owner, and review all overdue exceptions weekly."
+msgstr ""
+"يوحّد قسما المالية والمشتريات مسار التسوية، ويُعيَّن مالك واحد، ويُراجع جميع"
+" الاستثناءات المتأخرة أسبوعياً."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg5_count_critical
+msgid "Sign-off on the adjustment and close the finding."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg5_cycle_high
+msgid "Slow close of the receipt cycle (closed)"
+msgstr "تأخير في إغلاق دورة الاستلام (مغلق)"
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg5_cycle_high
+msgid "Slower accuracy of interim stock reports."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg2_inreview
+msgid ""
+"Delayed approval extended the exposure window and slowed management's "
+"ability to correct the payment control failure."
+msgstr ""
+"مدّد التأخر في الاعتماد نافذة التعرّض وأبطأ قدرة الإدارة على تصحيح فشل رقابة"
+" الدفع."
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:auditflow_standard.demo_audit_finding_eg3_inreview
+msgid "Slower recognition of the bonus link to the KPI."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg2_closed
+msgid "Stabilize a single reference in pick lists."
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_my_audit
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_task_form
+msgid "Start"
+msgstr "بدء"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__start_date
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+msgid "Start Fieldwork"
+msgstr "بدء أعمال ميدانية"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid "Start and end dates are required for report readiness."
+msgstr "تواريخ البدء والانتهاء مطلوبة لجاهزية إصدار التقرير."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#. odoo-python
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: code:addons/auditflow_standard/controllers/portal.py:0
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__state
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__status
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__state
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__status
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_my_audit
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Status"
+msgstr "الحالة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__activity_state
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__activity_state
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__activity_state
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__activity_state
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__target
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.report_audit_engagement_document
+msgid "Target"
+msgstr "مستهدف"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__name
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_task_form
+msgid "Task"
+msgstr "مهمة"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__task_count
+msgid "Task Count"
+msgstr ""
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_plan.py:0
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__task_ids
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_tasks
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+msgid "Tasks"
+msgstr "المهام"
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg5_doc_low
+msgid "Temporary duplicate naming."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg4_sod
+msgid ""
+"Temporary overlap between a requester, approver, and reviewer in a single UI"
+" shell."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg1_vendor_closed
+msgid "Temporary overlap in the vendor data entry path."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg2_closed
+msgid "Temporary reference mismatch between two screens."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.engagement,scope:auditflow_standard.demo_audit_engagement_procurement
+msgid ""
+"The review covers vendor selection, purchase order issuance, goods receipt, "
+"and invoice approval in line with policy and segregation of duties."
+msgstr ""
+"تغطي المراجعة اختيار الموردين وإصدار أوامر الشراء واستلام البضائع واعتماد "
+"الفواتير بما يتوافق مع السياسة وفصل المهام."
+
+#. module: auditflow_standard
+#: model:audit.engagement,scope:auditflow_standard.demo_audit_engagement_payments
+msgid ""
+"The review matches payments to supporting documents: purchase order, proof "
+"of receipt, delegation, and prior approvals."
+msgstr ""
+"تراعي المراجعة مطابقة المدفوعات للمستندات الداعمة: أمر الشراء وإثبات "
+"الاستلام والتفويض والاعتمادات السابقة."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.portal_my_audit
+msgid "There are no audit plans visible to you yet."
+msgstr "لا توجد لديك حالياً خطط مراجعة تظهر لك."
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg1_auth
+msgid "Tie the job title to a delegation cap and a documented extension path."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg4_sod
+msgid "Tighten binding rules in the system."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg2_closed
+msgid "Tighter approval sample matching (closed)"
+msgstr "مطابقة أدق لعيّنات الاعتماد (مغلق)"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_kpi__name
+msgid "Title"
+msgstr "العنوان"
+
+#. module: auditflow_standard
+#: model:audit.finding,name:auditflow_standard.demo_audit_finding_eg3_hr_separation
+msgid "Title vs. system role mismatch (closed)"
+msgstr "عدم تطابق المسمى ودور النظام (مغلق)"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__total_plans
+msgid "Total Plans"
+msgstr "إجمالي الخطط"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_dashboard_stable__total_tasks
+msgid "Total Tasks"
+msgstr "إجمالي المهام"
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg4_access
+msgid "Turn reminders back on and test sign-off."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__activity_exception_decoration
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__activity_exception_decoration
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__activity_exception_decoration
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__activity_exception_decoration
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg1_doc_po
+msgid ""
+"Update the procurement workflow to block payment progression unless PO, "
+"receipt evidence, and technical approval are complete."
+msgstr ""
+"تحديث مسار المشتريات لمنع تقدّم الدفع ما لم يكتمل أمر الشراء وأدلة الاستلام "
+"والاعتماد الفني."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg1_doc_po
+msgid ""
+"Management acknowledged the documentation gap but delayed implementation "
+"pending coordination with Finance."
+msgstr ""
+"أقرّت الإدارة وجود فجوة في التوثيق لكنها أرجأت التنفيذ بانتظار التنسيق مع "
+"الشؤون المالية."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:auditflow_standard.demo_audit_finding_eg2_payment
+msgid ""
+"Initial response was delayed; Audit escalated the issue after repeated "
+"follow-ups due to financial exposure."
+msgstr ""
+"تأخر الرد الأولي؛ فصعّد قسم المراجعة الأمر بعد متابعات متكررة نظراً لتعرّض "
+"الشركة مالياً."
+
+#. module: auditflow_standard
+#: model:audit.finding,description:auditflow_standard.demo_audit_finding_eg1_auth
+msgid ""
+"Values exceeded delegation limits without a logged exception per procurement"
+" committee policy."
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.engagement,objectives:auditflow_standard.demo_audit_engagement_procurement
+msgid ""
+"Verify that documentation is complete, delegation is valid, and receipt "
+"matches the purchase order before payment."
+msgstr ""
+"التحقق من اكتمال التوثيق وصحة التفويض ومطابقة الاستلام لأمر الشراء قبل "
+"الدفع."
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:auditflow_standard.demo_audit_finding_eg2_payment
+msgid ""
+"The system allowed payment processing without enforcing a complete three-way"
+" match between PO, goods receipt, and invoice approval."
+msgstr ""
+"سمح النظام بمعالجة الدفع دون فرض مطابقة ثلاثية كاملة بين أمر الشراء واستلام "
+"البضائع واعتماد الفاتورة."
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:auditflow_standard.demo_audit_finding_eg2_payment
+msgid ""
+"Configure a payment control gate, produce a weekly exception report, and "
+"escalate unmatched payments to Finance and Procurement owners."
+msgstr ""
+"ضبط بوابة رقابة على الدفعات، وإصدار تقرير استثناءات أسبوعي، ورفع المدفوعات "
+"غير المطابقة إلى مسؤولي المالية والمشتريات."
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_engagement__website_message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_finding__website_message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_indicator_stable__website_message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_plan_stable__website_message_ids
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_task_stable__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:ir.model.fields,help:auditflow_standard.field_audit_engagement__website_message_ids
+#: model:ir.model.fields,help:auditflow_standard.field_audit_finding__website_message_ids
+#: model:ir.model.fields,help:auditflow_standard.field_audit_indicator_stable__website_message_ids
+#: model:ir.model.fields,help:auditflow_standard.field_audit_plan_stable__website_message_ids
+#: model:ir.model.fields,help:auditflow_standard.field_audit_task_stable__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:auditflow_standard.demo_audit_finding_eg5_doc_low
+msgid "Weekly label review guide."
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard_kpi_form
+msgid "Shortcuts"
+msgstr "اختصارات"
+
+#. module: auditflow_standard
+#: model:ir.actions.act_window,name:auditflow_standard.action_audit_dashboard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard
+msgid "Workplan dashboard"
+msgstr "لوحة خطة العمل"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_engagement.py:0
+msgid ""
+"You can only review report readiness for one audit operation at a time. "
+"Select a single operation, or ensure all selected operations are ready to "
+"issue."
+msgstr ""
+"يمكنك مراجعة جاهزية إصدار التقرير لعملية مراجعة واحدة فقط في كل مرة. حدّد "
+"عملية واحدة فقط، أو تأكد أن جميع عمليات المراجعة المحددة جاهزة للإصدار."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_plan_form
+msgid "e.g. AUD/2026/0001"
+msgstr "مثال: AUD/2026/0001"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_engagement_form
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_finding_form
+msgid "e.g. Missing approval on journal entries"
+msgstr "مثال: تفويض مفقود على قيود يومية"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "All entities under review"
+msgstr "كل الجهات محل المراجعة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "All reviewers"
+msgstr "كل المراجعين"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "All Severities"
+msgstr "كل مستويات الخطورة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "All Statuses"
+msgstr "كل الحالات"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Entity under review"
+msgstr "الجهة محل المراجعة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Bar Chart"
+msgstr "مخطط أعمدة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Chart total"
+msgstr "إجمالي المخطط"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Chart type"
+msgstr "نوع المخطط"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Coming soon"
+msgstr "قريباً"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Completed engagements"
+msgstr "عمليات مراجعة مكتملة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Could not load chart data."
+msgstr "تعذر تحميل بيانات المخطط."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Could not load dashboard data."
+msgstr "تعذر تحميل بيانات لوحة القيادة."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Could not refresh dashboard data."
+msgstr "تعذر تحديث بيانات لوحة القيادة."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Distribution"
+msgstr "توزيع"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid ""
+"Reserve this panel for links to management reports or an external analytics "
+"tool if your organization adds one later."
+msgstr ""
+"احتفظ بهذه المساحة لروابط تقارير الإدارة أو أداة تحليلات خارجية إذا أضافها "
+"فريقكم لاحقاً."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Executive insight"
+msgstr "رؤية تنفيذية"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Filters apply to KPI totals and the selected metric chart."
+msgstr "يتم تطبيق عوامل التصفية على إجماليات مؤشرات الأداء والمخطط المحدد."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Technical key"
+msgstr "المعرّف التقني"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Loading chart data..."
+msgstr "جاري تحميل بيانات المخطط..."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Loading dashboard data..."
+msgstr "جاري تحميل بيانات لوحة القيادة..."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Standard analytics"
+msgstr "تحليلات النسخة القياسية"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Metric"
+msgstr "المؤشر"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "No chart data available."
+msgstr "لا تتوفر بيانات للمخطط."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "External reporting"
+msgstr "تقارير خارجية"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Placeholder"
+msgstr "عنصر نائب"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Real-time insights for internal audit"
+msgstr "رؤى فورية للمراجعة الداخلية"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Refreshing dashboard..."
+msgstr "جاري تحديث لوحة القيادة..."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Refresh"
+msgstr "تحديث"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Risk level"
+msgstr "مستوى المخاطر"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Selected metric"
+msgstr "المؤشر المحدد"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Total engagements"
+msgstr "إجمالي عمليات المراجعة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Trend"
+msgstr "اتجاه زمني"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Unset"
+msgstr "غير محدد"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Unset auditee"
+msgstr "جهة محل المراجعة غير محددة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid ""
+"Use this view to identify internal audit pressure points and prioritize "
+"management attention."
+msgstr ""
+"استخدم هذا العرض لتحديد نقاط الضغط في المراجعة الداخلية وترتيب أولويات "
+"اهتمام الإدارة."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Value"
+msgstr "القيمة"
+
+#. module: auditflow_standard
+#. odoo-python
+#: code:addons/auditflow_standard/models/audit_plan.py:0
+msgid "plan_id"
+msgstr ""
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_dashboard_kpi_form
+msgid "Review result health"
+msgstr "صحة نتائج المراجعة"
+
+#. module: auditflow_standard
+#: model:ir.model,name:auditflow_standard.model_audit_corrective_action
+msgid "Corrective Action"
+msgstr "الإجراء التصحيحي"
+
+#. module: auditflow_standard
+#: model:ir.model.fields,field_description:auditflow_standard.field_audit_corrective_action__name
+msgid "Corrective Action Title"
+msgstr "عنوان الإجراء التصحيحي"
+
+#. module: auditflow_standard
+msgid "Corrective actions"
+msgstr "الإجراءات التصحيحية"
+
+#. module: auditflow_standard
+msgid "All corrective actions"
+msgstr "كل الإجراءات التصحيحية"
+
+#. module: auditflow_standard
+msgid "My corrective actions"
+msgstr "إجراءاتي"
+
+#. module: auditflow_standard
+msgid "My actions"
+msgstr "إجراءاتي"
+
+#. module: auditflow_standard
+msgid "Overdue corrective actions"
+msgstr "الإجراءات المتأخرة"
+
+#. module: auditflow_standard
+msgid "Completed corrective actions"
+msgstr "الإجراءات المكتملة"
+
+#. module: auditflow_standard
+msgid "Open actions"
+msgstr "إجراءات مفتوحة"
+
+#. module: auditflow_standard
+msgid "Overdue actions"
+msgstr "إجراءات متأخرة"
+
+#. module: auditflow_standard
+msgid "Completed actions"
+msgstr "الإجراءات المكتملة"
+
+#. module: auditflow_standard
+msgid "Action owner"
+msgstr "مسؤول الإجراء"
+
+#. module: auditflow_standard
+msgid "Due date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: auditflow_standard
+msgid "Days overdue"
+msgstr "أيام التأخير"
+
+#. module: auditflow_standard
+msgid "Follow-up notes"
+msgstr "ملاحظات المتابعة"
+
+#. module: auditflow_standard
+msgid "Management comment"
+msgstr "تعليق الإدارة"
+
+#. module: auditflow_standard
+msgid "Related review result"
+msgstr "نتيجة المراجعة المرتبطة"
+
+#. module: auditflow_standard
+msgid "Audit engagement"
+msgstr "عملية المراجعة"
+
+#. module: auditflow_standard
+msgid "Action details"
+msgstr "تفاصيل الإجراء"
+
+#. module: auditflow_standard
+msgid "Completion date"
+msgstr "تاريخ الإكمال"
+
+#. module: auditflow_standard
+msgid "Overdue action"
+msgstr "متأخر عن التنفيذ"
+
+#. module: auditflow_standard
+msgid "Total corrective actions"
+msgstr "إجمالي الإجراءات التصحيحية"
+
+#. module: auditflow_standard
+msgid "Open corrective actions"
+msgstr "إجراءات مفتوحة"
+
+#. module: auditflow_standard
+msgid "High-risk open corrective actions"
+msgstr "إجراءات عالية الخطورة مفتوحة"
+
+#. module: auditflow_standard
+msgid "Corrective action completion rate"
+msgstr "معدل الإكمال"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "No action"
+msgstr "لا إجراء"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Pending action"
+msgstr "إجراء معلّق"
+
+#. module: auditflow_standard
+msgid "Corrective follow-up"
+msgstr "متابعة الإجراء التصحيحي"
+
+#. module: auditflow_standard
+msgid "Review Result"
+msgstr "نتيجة المراجعة"
+
+#. module: auditflow_standard
+msgid "Review Results"
+msgstr "نتائج المراجعة"
+
+#. module: auditflow_standard
+msgid "Execution Status"
+msgstr "حالة التنفيذ"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "High Risk"
+msgstr "مخاطر عالية"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Delayed"
+msgstr "متأخر"
+
+#. module: auditflow_standard
+msgid "Accountable Owner"
+msgstr "المالك المسؤول"
+
+#. module: auditflow_standard
+msgid "Corrective Action Owner"
+msgstr "مسؤول الإجراء التصحيحي"
+
+#. module: auditflow_standard
+#: model:ir.ui.menu,name:auditflow_standard.menu_smart_audit_section_capa
+msgid "Corrective Actions (CAPA)"
+msgstr "الإجراءات التصحيحية (CAPA)"
+
+#. module: auditflow_standard
+msgid "Action Description"
+msgstr "وصف الإجراء"
+
+#. module: auditflow_standard
+msgid "Follow-up Notes"
+msgstr "ملاحظات المتابعة"
+
+#. module: auditflow_standard
+msgid "Corrective Action (CAPA)"
+msgstr "الإجراء التصحيحي (CAPA)"
+
+#. module: auditflow_standard
+msgid "Days delayed"
+msgstr "أيام التأخر"
+
+#. module: auditflow_standard
+msgid "Completion Date"
+msgstr "تاريخ الإكمال"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Total Corrective Actions (CAPA)"
+msgstr "إجمالي الإجراءات التصحيحية (CAPA)"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Open Corrective Actions (CAPA)"
+msgstr "الإجراءات التصحيحية المفتوحة (CAPA)"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_capa_overdue
+msgid "Delayed Corrective Actions (CAPA)"
+msgstr "الإجراءات التصحيحية المتأخرة (CAPA)"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_capa_completed
+msgid "Completed Corrective Actions (CAPA)"
+msgstr "الإجراءات التصحيحية المكتملة (CAPA)"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "High-risk open Corrective Actions (CAPA)"
+msgstr "الإجراءات التصحيحية عالية المخاطر المفتوحة (CAPA)"
+
+#. module: auditflow_standard
+msgid "Corrective Actions (CAPA) count"
+msgstr "عدد الإجراءات التصحيحية (CAPA)"
+
+#. module: auditflow_standard
+msgid "Delayed corrective actions"
+msgstr "إجراءات تصحيحية متأخرة"
+
+#. module: auditflow_standard
+msgid "High risk review results"
+msgstr "نتائج مراجعة عالية الخطورة"
+
+#. module: auditflow_standard
+msgid "Delayed Review Results"
+msgstr "نتائج مراجعة متأخرة"
+
+#. module: auditflow_standard
+msgid "All Review Results"
+msgstr "كل نتائج المراجعة"
+
+#. module: auditflow_standard
+msgid "Open Review Results"
+msgstr "نتائج مراجعة مفتوحة"
+
+#. module: auditflow_standard
+msgid "Closed Review Results"
+msgstr "نتائج مراجعة مغلقة"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Execution status"
+msgstr "حالة التنفيذ"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "All execution statuses"
+msgstr "كل حالات التنفيذ"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Corrective Action (CAPA) completion rate"
+msgstr "معدل إنجاز الإجراءات التصحيحية (CAPA)"
+
+#. module: auditflow_standard
+msgid "Mark Completed"
+msgstr "تحديد كمكتمل"
+
+#. module: auditflow_standard
+msgid "High risk priority"
+msgstr "أولوية عالية الخطورة"
+
+#. module: auditflow_standard
+msgid "Delayed visibility"
+msgstr "رؤية التأخير"
+
+#. module: auditflow_standard
+msgid ""
+"High risk review result “%s” must have at least one Corrective Action "
+"(CAPA)."
+msgstr ""
+"نتيجة المراجعة عالية الخطورة «%s» يجب أن يكون لديها إجراء تصحيحي (CAPA) واحد"
+" على الأقل."
+
+#. module: auditflow_standard
+msgid ""
+"Delayed Corrective Actions (CAPA) exist; management follow-up is incomplete."
+msgstr "توجد إجراءات تصحيحية متأخرة؛ متابعة الإدارة غير مكتملة."
+
+#. module: auditflow_standard
+msgid "Open review result “%s” must have a corrective action owner."
+msgstr ""
+"نتيجة المراجعة المفتوحة «%s» يجب أن يكون لها مسؤول عن الإجراء التصحيحي."
+
+#. module: auditflow_standard
+msgid "High risk review results must have a target execution date."
+msgstr "نتائج المراجعة عالية الخطورة يجب أن يكون لها تاريخ تنفيذ مستهدف."
+
+#. module: auditflow_standard
+msgid "High risk review results must have an accountable owner."
+msgstr "نتائج المراجعة عالية الخطورة يجب أن يكون لها مالك مسؤول."
+
+#. module: auditflow_standard
+msgid "Auditors cannot delete Corrective Actions (CAPA) that are completed."
+msgstr "لا يمكن للمراجعين حذف الإجراءات التصحيحية (CAPA) المكتملة."
+
+#. module: auditflow_standard
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_capa_my
+msgid "My Corrective Actions (CAPA)"
+msgstr "إجراءاتي التصحيحية (CAPA)"
+
+#. module: auditflow_standard
+#: model:ir.ui.menu,name:auditflow_standard.menu_audit_capa_all
+msgid "All Corrective Actions (CAPA)"
+msgstr "كل الإجراءات التصحيحية (CAPA)"
+
+#. module: auditflow_standard
+msgid "Delayed actions"
+msgstr "إجراءات متأخرة"
+
+#. module: auditflow_standard
+msgid "Open Actions"
+msgstr "إجراءات مفتوحة"
+
+#. module: auditflow_standard
+msgid "Delayed Actions"
+msgstr "إجراءات متأخرة"
+
+#. module: auditflow_standard
+msgid "High Risk Review Results"
+msgstr "نتائج مراجعة عالية الخطورة"
+
+#. module: auditflow_standard
+msgid ""
+"Register Corrective Actions (CAPA) linked to review results to track "
+"management follow-up."
+msgstr ""
+"سجّل الإجراءات التصحيحية (CAPA) المرتبطة بنتائج المراجعة لمتابعة تنفيذ "
+"الإدارة."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Completed"
+msgstr "مكتمل"
+
+#. module: auditflow_standard
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Assigned"
+msgstr "معيّن"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Action summary"
+msgstr "ملخص الإجراء التصحيحي"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Related audit context"
+msgstr "سياق عملية المراجعة المرتبطة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Ownership & deadlines"
+msgstr "المسؤولية والمواعيد النهائية"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Assign"
+msgstr "تعيين"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Start Progress"
+msgstr "بدء التنفيذ"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Follow-up"
+msgstr "المتابعة"
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Describe the corrective action..."
+msgstr "صف الإجراء التصحيحي..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "e.g. Document approval workflow..."
+msgstr "مثال: مسار اعتماد المستندات..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Management response..."
+msgstr "رد الإدارة..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_form
+msgid "Internal follow-up notes..."
+msgstr "ملاحظات متابعة داخلية..."
+
+#. module: auditflow_standard
+#: model_terms:ir.ui.view,arch_db:auditflow_standard.view_audit_corrective_action_search
+msgid "High priority"
+msgstr "أولوية عالية"
+
+#. module: auditflow_standard
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: auditflow_standard
+msgid "Control Effectiveness"
+msgstr "فعالية الرقابة"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,name:auditflow_standard.demo_corrective_action_inventory_overdue
+msgid "Define approval path for high-value inventory adjustments"
+msgstr "تحديد مسار اعتماد لتعديلات المخزون عالية القيمة"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,description:auditflow_standard.demo_corrective_action_inventory_overdue
+msgid ""
+"Document dual approval routes and value thresholds before posting inventory "
+"adjustments."
+msgstr ""
+"توثيق مسارات الاعتماد المزدوجة وحدود القيمة قبل ترحيل تعديلات المخزون."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,followup_notes:auditflow_standard.demo_corrective_action_inventory_overdue
+msgid "Demo scenario: overdue corrective action for the executive dashboard."
+msgstr "سيناريو تجريبي: إجراء تصحيحي متأخر لعرض لوحة المديرين التنفيذيين."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,name:auditflow_standard.demo_corrective_action_procurement_assigned
+msgid "Enforce PO evidence before payment routing"
+msgstr "فرض أدلة أمر الشراء قبل توجيه الدفع"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,description:auditflow_standard.demo_corrective_action_procurement_assigned
+msgid ""
+"Update procurement controls so payment routing is blocked unless PO, receipt"
+" evidence, and technical sign-off are complete."
+msgstr ""
+"تحديث ضوابط المشتريات لمنع توجيه الدفع ما لم يكتمل أمر الشراء وأدلة الاستلام"
+" والاعتماد الفني."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,followup_notes:auditflow_standard.demo_corrective_action_procurement_assigned
+msgid ""
+"Hero Case CF-001: This assigned corrective action represents the first "
+"containment step before the payment control gate is activated."
+msgstr ""
+"الحالة النموذجية CF-001: يمثّل هذا الإجراء التصحيحي المُكلَّف أول خطوة "
+"احتواء قبل تفعيل بوابة رقابة الدفع."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,name:auditflow_standard.demo_corrective_action_payment_critical
+msgid "Activate three-way match exception report"
+msgstr "تفعيل تقرير استثناءات المطابقة الثلاثية"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,description:auditflow_standard.demo_corrective_action_payment_critical
+msgid ""
+"Create a weekly exception report listing payments, invoices, or receipts "
+"that fail the three-way match control."
+msgstr ""
+"إنشاء تقرير استثناءات أسبوعي يُدرج المدفوعات أو الفواتير أو إيصالات الاستلام"
+" التي لا تمر بضوابط المطابقة الثلاثية."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,followup_notes:auditflow_standard.demo_corrective_action_payment_critical
+msgid ""
+"Hero Case CF-001: No corrective action has started despite critical "
+"exposure. This item should appear as the urgent action in the executive demo"
+" dashboard."
+msgstr ""
+"الحالة النموذجية CF-001: لم يُبدأ أي إجراء تصحيحي رغم التعرّض الحرج. يُفترض "
+"أن يظهر هذا البند كإجراء عاجل في لوحة العرض التنفيذية للعرض التجريبي."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,name:auditflow_standard.demo_corrective_action_it_done
+msgid "Review access rights for inactive users"
+msgstr "مراجعة صلاحيات الوصول للمستخدمين غير النشطين"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,description:auditflow_standard.demo_corrective_action_it_done
+msgid ""
+"Sample dormant accounts and confirm timely access revocation per policy."
+msgstr ""
+"أخذ عينات من الحسابات غير المستخدمة والتأكد من إلغاء الصلاحيات وفق سياسة "
+"الوصول في الوقت المناسب."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,management_comment:auditflow_standard.demo_corrective_action_it_done
+msgid "Access review completed; evidence is filed in the system."
+msgstr "اكتملت مراجعة الصلاحيات؛ الأدلة مرفقة في النظام."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,name:auditflow_standard.demo_corrective_action_hr_cancelled
+msgid "Document management response and KPI evidence"
+msgstr "توثيق رد الإدارة وأدلة مؤشرات الأداء"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,description:auditflow_standard.demo_corrective_action_hr_cancelled
+msgid ""
+"Store the formal management response and excerpts of supporting KPI "
+"approvals."
+msgstr "حفظ رد الإدارة الرسمي ومستخلصات موافقات مؤشرات الأداء الداعمة."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,followup_notes:auditflow_standard.demo_corrective_action_hr_cancelled
+msgid "Superseded by a revised incentives path; kept for demo purposes."
+msgstr "استُبدل بمسار حوافز معدّل؛ يُحتفظ به لأغراض العرض التجريبي."
+
+#. module: auditflow_standard
+#: model:audit.engagement,name:auditflow_standard.demo_audit_engagement_procurement
+msgid "Procurement-to-pay cycle — 2025/10"
+msgstr "دورة المشتريات إلى الدفع — 2025/10"
+
+#. module: auditflow_standard
+#: model:audit.engagement,name:auditflow_standard.demo_audit_engagement_payments
+msgid "Disbursements & expenses — 2025/11"
+msgstr "الصرف والمصروفات — 2025/11"
+
+#. module: auditflow_standard
+#: model:audit.engagement,name:auditflow_standard.demo_audit_engagement_hr
+msgid "Human resources — 2025/08"
+msgstr "الموارد البشرية — 2025/08"
+
+#. module: auditflow_standard
+#: model:audit.engagement,name:auditflow_standard.demo_audit_engagement_itaccess
+msgid "IT access rights — 2026/01"
+msgstr "صلاحيات الوصول لتقنية المعلومات — 2026/01"
+
+#. module: auditflow_standard
+#: model:audit.engagement,name:auditflow_standard.demo_audit_engagement_inventory
+msgid "Inventory & warehousing — 2025/05"
+msgstr "المخزون والتخزين — 2025/05"
+
+#. module: auditflow_standard
+# ===== DEMO DATA (Audit Video Scenario - Final No Automation Claims) =====
+#: model:audit.finding,name:demo_audit_finding_eg1_doc_po
+msgid "Control weakness in purchase documentation"
+msgstr "ضعف رقابي في توثيق أوامر الشراء"
+
+#. module: auditflow_standard
+#: model:audit.finding,description:demo_audit_finding_eg1_doc_po
+msgid ""
+"Hero Case CF-001: During audit review of the procurement-to-pay cycle, the "
+"audit team noted purchase orders approved with incomplete receipt evidence "
+"and missing technical sign-off. This was recorded as the first weakness in "
+"the payment control chain."
+msgstr ""
+"حالة رئيسية CF-001: خلال مراجعة دورة الشراء إلى الدفع، لاحظ فريق المراجعة "
+"وجود أوامر شراء معتمدة مع نقص في أدلة الاستلام وغياب الاعتماد الفني. وتم "
+"تسجيل ذلك كأول نقطة ضعف في سلسلة الرقابة على المدفوعات."
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:demo_audit_finding_eg1_doc_po
+msgid ""
+"Mandatory verification steps were not consistently completed before "
+"procurement documents moved toward payment review."
+msgstr ""
+"لم تكن خطوات التحقق الإلزامية تُستكمل بشكل منتظم قبل انتقال مستندات "
+"المشتريات إلى مرحلة مراجعة الدفع."
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:demo_audit_finding_eg1_doc_po
+msgid ""
+"Incomplete documentation weakened the audit trail and increased the risk of "
+"unsupported payments."
+msgstr ""
+"أدى نقص التوثيق إلى إضعاف مسار المراجعة وزيادة مخاطر وجود مدفوعات غير مدعومة"
+" بالمستندات."
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:demo_audit_finding_eg1_doc_po
+msgid ""
+"Require complete receipt evidence, technical sign-off, and purchase order "
+"documentation before payment review."
+msgstr ""
+"اشتراط اكتمال أدلة الاستلام والاعتماد الفني وتوثيق أمر الشراء قبل مراجعة "
+"الدفع."
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:demo_audit_finding_eg1_doc_po
+msgid ""
+"Procurement will update the review checklist and assign ownership for "
+"document completeness before payment routing."
+msgstr ""
+"ستقوم إدارة المشتريات بتحديث قائمة المراجعة وتحديد مسؤولية اكتمال المستندات "
+"قبل توجيهها لمراجعة الدفع."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:demo_audit_finding_eg1_doc_po
+msgid ""
+"Management acknowledged the documentation gap and agreed to coordinate with "
+"Finance on the corrective path."
+msgstr ""
+"أقرت الإدارة بوجود فجوة في التوثيق ووافقت على التنسيق مع الإدارة المالية "
+"بشأن مسار التصحيح."
+
+#. module: auditflow_standard
+#: model:audit.finding,description:demo_audit_finding_eg2_payment
+msgid ""
+"Hero Case CF-001: During audit sample testing of the payment cycle, the "
+"audit team identified a payment case where the purchase order, receipt "
+"confirmation, and invoice validation were not fully aligned. Similar "
+"exceptions were observed across multiple samples, indicating a recurring "
+"control weakness rather than an isolated case."
+msgstr ""
+"حالة رئيسية CF-001: خلال اختبار عينات من دورة المدفوعات، حدد فريق المراجعة "
+"حالة دفع لم يكن فيها تطابق كامل بين أمر الشراء، وتأكيد الاستلام، واعتماد "
+"الفاتورة. وتمت ملاحظة استثناءات مشابهة في عدة عينات، مما يشير إلى ضعف رقابي "
+"متكرر وليس حالة منفردة."
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:demo_audit_finding_eg2_payment
+msgid ""
+"Payment review relied on manual follow-up without a consistently documented "
+"three-way match control."
+msgstr ""
+"اعتمدت مراجعة المدفوعات على المتابعة اليدوية دون وجود توثيق منتظم لرقابة "
+"المطابقة الثلاثية."
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:demo_audit_finding_eg2_payment
+msgid ""
+"The issue exposed the company to financial leakage, duplicate payment risk, "
+"weak evidence, and audit non-compliance."
+msgstr ""
+"عرّضت هذه المشكلة الشركة لمخاطر تسرب مالي، واحتمال تكرار المدفوعات، وضعف "
+"الأدلة، وعدم الالتزام بمتطلبات المراجعة."
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:demo_audit_finding_eg2_payment
+msgid ""
+"Require documented three-way match evidence before payment approval, with "
+"formal exception approval where needed."
+msgstr ""
+"اشتراط وجود أدلة موثقة للمطابقة الثلاثية قبل اعتماد الدفع، مع اعتماد رسمي "
+"للاستثناءات عند الحاجة."
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:demo_audit_finding_eg2_payment
+msgid ""
+"Finance will prepare a weekly exception list, assign responsible owners, and"
+" escalate unmatched payments for management review."
+msgstr ""
+"ستقوم الإدارة المالية بإعداد قائمة أسبوعية بالاستثناءات، وتحديد الملاك "
+"المسؤولين، وتصعيد المدفوعات غير المطابقة لمراجعة الإدارة."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:demo_audit_finding_eg2_payment
+msgid ""
+"Initial management response was delayed; Audit escalated the matter due to "
+"the critical financial exposure."
+msgstr ""
+"تأخر رد الإدارة المبدئي؛ وقام فريق المراجعة بتصعيد الموضوع بسبب حجم التعرض "
+"المالي الحرج."
+
+#. module: auditflow_standard
+#: model:audit.finding,description:demo_audit_finding_eg2_inreview
+msgid ""
+"Hero Case CF-001: During follow-up, the audit team noted that settlement "
+"approvals for unmatched payments remained pending without a clear logged "
+"reason, delaying closure of the critical payment finding."
+msgstr ""
+"حالة رئيسية CF-001: خلال المتابعة، لاحظ فريق المراجعة أن اعتمادات التسوية "
+"للمدفوعات غير المطابقة ما زالت معلقة دون سبب موثق بوضوح، مما أدى إلى تأخير "
+"إغلاق ملاحظة الدفع الحرجة."
+
+#. module: auditflow_standard
+#: model:audit.finding,root_cause:demo_audit_finding_eg2_inreview
+msgid ""
+"Settlement ownership changed without formal handover or sufficient "
+"visibility in the approval path."
+msgstr "تغير مالك التسوية دون تسليم رسمي أو وضوح كافٍ في مسار الاعتماد."
+
+#. module: auditflow_standard
+#: model:audit.finding,impact:demo_audit_finding_eg2_inreview
+msgid ""
+"Delayed approval extended the exposure window and slowed management’s "
+"ability to correct the payment control weakness."
+msgstr ""
+"أدى تأخر الاعتماد إلى إطالة فترة التعرض للمخاطر وإبطاء قدرة الإدارة على "
+"معالجة ضعف الرقابة على المدفوعات."
+
+#. module: auditflow_standard
+#: model:audit.finding,recommendation:demo_audit_finding_eg2_inreview
+msgid ""
+"Define a named settlement owner, visible approval status, and escalation "
+"rule for overdue payment exceptions."
+msgstr ""
+"تحديد مالك واضح للتسوية، وحالة اعتماد ظاهرة، وقاعدة تصعيد للاستثناءات "
+"المتأخرة في المدفوعات."
+
+#. module: auditflow_standard
+#: model:audit.finding,action_plan:demo_audit_finding_eg2_inreview
+msgid ""
+"Finance and Procurement will standardize the settlement path, assign a "
+"single accountable owner, and review overdue exceptions weekly."
+msgstr ""
+"ستقوم إدارتا المالية والمشتريات بتوحيد مسار التسوية، وتعيين مالك مسؤول واحد،"
+" ومراجعة الاستثناءات المتأخرة أسبوعياً."
+
+#. module: auditflow_standard
+#: model:audit.finding,management_response:demo_audit_finding_eg2_inreview
+msgid ""
+"Management approved an escalation workshop and assigned Finance as the "
+"accountable owner for settlement closure."
+msgstr ""
+"وافقت الإدارة على ورشة عمل للتصعيد وعيّنت الإدارة المالية كمالك مسؤول عن "
+"إغلاق التسويات."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,name:demo_corrective_action_payment_critical
+msgid "Prepare three-way match exception report"
+msgstr "إعداد تقرير استثناءات المطابقة الثلاثية"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,description:demo_corrective_action_payment_critical
+msgid ""
+"Prepare a weekly audit follow-up report listing payments, invoices, or "
+"receipts that do not have complete three-way match evidence."
+msgstr ""
+"إعداد تقرير متابعة أسبوعي للمراجعة يتضمن المدفوعات أو الفواتير أو مستندات "
+"الاستلام التي لا تحتوي على أدلة مكتملة للمطابقة الثلاثية."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,followup_notes:demo_corrective_action_payment_critical
+msgid ""
+"Hero Case CF-001: No corrective action has been initiated following audit "
+"escalation. This item should appear as the urgent action in the executive "
+"demo dashboard."
+msgstr ""
+"حالة رئيسية CF-001: لم يبدأ أي إجراء تصحيحي بعد تصعيد المراجعة. يجب أن يظهر "
+"هذا البند كإجراء عاجل في لوحة العرض التنفيذية."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,name:demo_corrective_action_procurement_assigned
+msgid "Strengthen PO evidence before payment review"
+msgstr "تعزيز أدلة أمر الشراء قبل مراجعة الدفع"
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,description:demo_corrective_action_procurement_assigned
+msgid ""
+"Update procurement review steps so payment review is not requested until PO "
+"evidence, receipt evidence, and technical sign-off are complete."
+msgstr ""
+"تحديث خطوات مراجعة المشتريات بحيث لا يتم طلب مراجعة الدفع إلا بعد اكتمال "
+"أدلة أمر الشراء، وأدلة الاستلام، والاعتماد الفني."
+
+#. module: auditflow_standard
+#: model:audit.corrective.action,followup_notes:demo_corrective_action_procurement_assigned
+msgid ""
+"Hero Case CF-001: This assigned corrective action represents the first "
+"containment step before Finance completes the payment exception follow-up."
+msgstr ""
+"حالة رئيسية CF-001: يمثل هذا الإجراء التصحيحي المسند أول خطوة احتواء قبل أن "
+"تستكمل الإدارة المالية متابعة استثناءات الدفع."
+
+#. module: auditflow_standard
+#. odoo-javascript
+#: code:addons/auditflow_standard/static/src/js/audit_dashboard.js:0
+msgid "Update"
+msgstr "تحديث"

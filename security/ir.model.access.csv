@@ -1,0 +1,44 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_audit_plan_auditee,audit.plan auditee,model_audit_plan_stable,group_audit_auditee,1,0,0,0
+access_audit_plan_auditor,audit.plan auditor,model_audit_plan_stable,group_audit_auditor,1,1,1,0
+access_audit_plan_manager,audit.plan manager,model_audit_plan_stable,group_audit_manager,1,1,1,1
+access_audit_plan_cae,audit.plan cae,model_audit_plan_stable,group_audit_cae,1,1,1,1
+access_audit_task_auditee,audit.task auditee,model_audit_task_stable,group_audit_auditee,1,0,0,0
+access_audit_task_auditor,audit.task auditor,model_audit_task_stable,group_audit_auditor,1,1,1,0
+access_audit_task_manager,audit.task manager,model_audit_task_stable,group_audit_manager,1,1,1,1
+access_audit_task_cae,audit.task cae,model_audit_task_stable,group_audit_cae,1,1,1,1
+access_audit_indicator_auditee,audit.indicator auditee,model_audit_indicator_stable,group_audit_auditee,1,0,0,0
+access_audit_indicator_auditor,audit.indicator auditor,model_audit_indicator_stable,group_audit_auditor,1,1,1,0
+access_audit_indicator_manager,audit.indicator manager,model_audit_indicator_stable,group_audit_manager,1,1,1,1
+access_audit_indicator_cae,audit.indicator cae,model_audit_indicator_stable,group_audit_cae,1,1,1,1
+access_audit_dashboard_auditor,audit.dashboard auditor,model_audit_dashboard_stable,group_audit_auditor,1,1,1,0
+access_audit_dashboard_manager,audit.dashboard manager,model_audit_dashboard_stable,group_audit_manager,1,1,1,0
+access_audit_dashboard_cae,audit.dashboard cae,model_audit_dashboard_stable,group_audit_cae,1,1,1,0
+access_audit_engagement_auditor,audit.engagement auditor,model_audit_engagement,group_audit_auditor,1,1,1,0
+access_audit_engagement_manager,audit.engagement manager,model_audit_engagement,group_audit_manager,1,1,1,1
+access_audit_engagement_cae,audit.engagement cae,model_audit_engagement,group_audit_cae,1,1,1,1
+access_audit_engagement_system,audit.engagement system,model_audit_engagement,base.group_system,1,1,1,1
+access_audit_engagement_auditee,audit.engagement auditee,model_audit_engagement,group_audit_auditee,1,0,0,0
+access_audit_finding_auditor,audit.finding auditor,model_audit_finding,group_audit_auditor,1,1,1,0
+access_audit_finding_manager,audit.finding manager,model_audit_finding,group_audit_manager,1,1,1,1
+access_audit_finding_cae,audit.finding cae,model_audit_finding,group_audit_cae,1,1,1,1
+access_audit_finding_system,audit.finding system,model_audit_finding,base.group_system,1,1,1,1
+access_audit_finding_auditee,audit.finding auditee,model_audit_finding,group_audit_auditee,1,0,0,0
+access_audit_corrective_action_auditor,audit.corrective.action auditor,model_audit_corrective_action,group_audit_auditor,1,1,1,1
+access_audit_corrective_action_manager,audit.corrective.action manager,model_audit_corrective_action,group_audit_manager,1,1,1,1
+access_audit_corrective_action_cae,audit.corrective.action cae,model_audit_corrective_action,group_audit_cae,1,1,1,1
+access_audit_corrective_action_system,audit.corrective.action system,model_audit_corrective_action,base.group_system,1,1,1,1
+access_audit_corrective_action_auditee,audit.corrective.action auditee,model_audit_corrective_action,group_audit_auditee,1,0,0,0
+access_issue_warning_wizard_auditor,audit.engagement issue warning wizard auditor,model_audit_engagement_issue_warning_wizard,group_audit_auditor,1,1,1,1
+access_issue_warning_wizard_manager,audit.engagement issue warning wizard manager,model_audit_engagement_issue_warning_wizard,group_audit_manager,1,1,1,1
+access_issue_warning_wizard_cae,audit.engagement issue warning wizard cae,model_audit_engagement_issue_warning_wizard,group_audit_cae,1,1,1,1
+access_issue_warning_wizard_system,audit.engagement issue warning wizard system,model_audit_engagement_issue_warning_wizard,base.group_system,1,1,1,1
+access_audit_dashboard_kpi_auditor,audit.dashboard kpi auditor,model_audit_dashboard_kpi,group_audit_auditor,1,1,1,0
+access_audit_dashboard_kpi_manager,audit.dashboard kpi manager,model_audit_dashboard_kpi,group_audit_manager,1,1,1,0
+access_audit_dashboard_kpi_cae,audit.dashboard kpi cae,model_audit_dashboard_kpi,group_audit_cae,1,1,1,0
+access_audit_dashboard_kpi_system,audit.dashboard kpi system,model_audit_dashboard_kpi,base.group_system,1,1,1,0
+access_audit_dashboard_service_senior,audit.dashboard.service senior,model_audit_dashboard_service,group_audit_senior_auditor,1,0,0,0
+access_audit_dashboard_service_auditor,audit.dashboard.service auditor,model_audit_dashboard_service,group_audit_auditor,1,0,0,0
+access_audit_dashboard_service_manager,audit.dashboard.service manager,model_audit_dashboard_service,group_audit_manager,1,0,0,0
+access_audit_dashboard_service_cae,audit.dashboard.service cae,model_audit_dashboard_service,group_audit_cae,1,0,0,0
+access_audit_dashboard_service_system,audit.dashboard.service system,model_audit_dashboard_service,base.group_system,1,0,0,0

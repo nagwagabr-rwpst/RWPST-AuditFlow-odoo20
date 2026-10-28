@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="RWPST AuditFlow is an internal audit management addon for Odoo 20. Manage audit engagements, findings, report readiness, overdue risks, and executive KPI dashboards inside Odoo."/>
+  <title>RWPST AuditFlow — Internal Audit Management for Odoo 20</title>
+</head>
+<body>
+
+<h1>RWPST AuditFlow</h1>
+
+<p><strong>Build 20.0.4.1.0</strong></p>
+
+<p>RWPST Labs · Odoo 20 addon. Internal audit management and executive audit intelligence for Odoo.</p>
+
+<p>Manage audit engagements, findings, report readiness, overdue risks, and executive KPI dashboards inside Odoo — a practical workflow for teams that need visibility from day one.</p>
+
+<p>
+  <a href="#features">Features</a>
+  · <a href="#demo-video">Demo</a>
+  · <a href="#dashboard">Executive dashboard</a>
+  · <a href="#screens">Screenshots</a>
+  · <a href="#workflow">Workflow</a>
+  · <a href="#fit">Best fit</a>
+  · <a href="#compare">Edition comparison</a>
+  · <a href="#faqs">Questions</a>
+  · <a href="#support">Support</a>
+</p>
+
+<h2>Edition and scope</h2>
+
+<p><strong>Standard Edition — practical and ready.</strong> RWPST AuditFlow focuses on internal audit workflow, findings follow-up, readiness checks, overdue risks, and KPI visibility. It is not intended to replace a full certified GRC platform. It is a focused audit intelligence layer for teams that want value from day one inside Odoo.</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr><th scope="col">Topic</th><th scope="col">Detail</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">Odoo version</th><td>Built for Odoo 20.</td></tr>
+    <tr><th scope="row">Delivery</th><td>Standard Odoo module install.</td></tr>
+    <tr><th scope="row">Focus</th><td>Engagements, findings, KPIs.</td></tr>
+    <tr><th scope="row">Languages</th><td>English and Arabic translation-ready.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="demo-video">Product demo</h2>
+
+<p>The video and poster image live under static/description/ in the module (for example finalDemo.mp4 and video_thumbnail.png).</p>
+
+<p>
+  <video controls="controls" preload="metadata" poster="video_thumbnail.png">
+    <source src="finalDemo.mp4" type="video/mp4"/>
+    Your browser does not support the video tag. Please use the screenshots below.
+  </video>
+</p>
+
+<p>Demo preview: executive dashboard, engagements, findings, readiness checks, and audit workflow screens.</p>
+
+<h2 id="features">Features</h2>
+
+<p>Built for the way audit work runs.</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr><th scope="col">Icon</th><th scope="col">Feature</th><th scope="col">Summary</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>📅</td>
+      <td><strong>Audit engagement lifecycle</strong></td>
+      <td>Model engagements from draft to closure with clear states, ownership, and traceability.</td>
+    </tr>
+    <tr>
+      <td>📝</td>
+      <td><strong>Findings management</strong></td>
+      <td>Track severity, status, actions, due dates, owners, and management responses.</td>
+    </tr>
+    <tr>
+      <td>✅</td>
+      <td><strong>Report readiness</strong></td>
+      <td>Check required engagement and finding data before issuing a report.</td>
+    </tr>
+    <tr>
+      <td>⚠️</td>
+      <td><strong>Warning wizard</strong></td>
+      <td>Guided warning when a report is not ready instead of a silent dead-end.</td>
+    </tr>
+    <tr>
+      <td>⏰</td>
+      <td><strong>Overdue findings tracking</strong></td>
+      <td>Surface non-closed findings past due date so teams can prioritize faster.</td>
+    </tr>
+    <tr>
+      <td>📊</td>
+      <td><strong>Executive dashboard</strong></td>
+      <td>OWL KPI summary and filtered charts: bar, trend, and distribution views.</td>
+    </tr>
+    <tr>
+      <td>🌍</td>
+      <td><strong>Arabic / English ready</strong></td>
+      <td>Translation-ready structure for English and Arabic in the same Odoo environment.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dashboard">Executive dashboard signals</h2>
+
+<p>The Executive Dashboard shows KPI totals and charts with filters for auditor, auditee, status, and severity.</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr><th scope="col">Group</th><th scope="col">Signal</th><th scope="col">Meaning</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Total</td><td><strong>Total engagements</strong></td><td>All engagements in scope.</td></tr>
+    <tr><td>Readiness</td><td><strong>Not ready</strong></td><td>Engagements still missing readiness requirements.</td></tr>
+    <tr><td>Readiness</td><td><strong>Report ready</strong></td><td>Clear to issue from a completeness perspective.</td></tr>
+    <tr><td>Risk</td><td><strong>Overdue findings</strong></td><td>Open items past due date.</td></tr>
+    <tr><td>Severity</td><td><strong>Critical findings</strong></td><td>Highest priority issues for escalation.</td></tr>
+    <tr><td>Status</td><td><strong>Open findings</strong></td><td>Still in progress or review.</td></tr>
+    <tr><td>Status</td><td><strong>Closed findings</strong></td><td>Completed loop for reporting and trends.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="screens">Screenshots</h2>
+
+<p>Screenshots use relative paths in static/description/.</p>
+
+<h3>Executive dashboard</h3>
+<p><img src="screenshot_dashboard.png" alt="RWPST AuditFlow executive dashboard screenshot" width="1000"/></p>
+
+<h3>Engagement form</h3>
+<p><img src="screenshot_engagement.png" alt="RWPST AuditFlow engagement form screenshot" width="1000"/></p>
+
+<h3>Findings</h3>
+<p><img src="screenshot_findings.png" alt="RWPST AuditFlow findings screenshot" width="1000"/></p>
+
+<h3>Issue report warning wizard</h3>
+<p><img src="screenshot_warning_wizard.png" alt="RWPST AuditFlow warning wizard screenshot" width="1000"/></p>
+
+<h2 id="workflow">Engagement workflow</h2>
+
+<p>Each engagement moves from planning to closure in five steps.</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr><th scope="col">Step</th><th scope="col">State</th><th scope="col">Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Draft</strong></td><td>Scoping, planning, and team assignment.</td></tr>
+    <tr><td>2</td><td><strong>Fieldwork</strong></td><td>Evidence, testing, and finding capture.</td></tr>
+    <tr><td>3</td><td><strong>Reporting</strong></td><td>Consolidation, review, and issue preparation.</td></tr>
+    <tr><td>4</td><td><strong>Issued</strong></td><td>Report published; responses tracked in Odoo.</td></tr>
+    <tr><td>5</td><td><strong>Closed</strong></td><td>Formal closure of the engagement record.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="fit">Who gets value first</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr><th scope="col">Audience</th><th scope="col">Value</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Internal audit teams</strong></td><td>Run audit tracking where enterprise data already lives.</td></tr>
+    <tr><td><strong>Compliance teams</strong></td><td>Align control testing and evidence with structured engagement and finding records.</td></tr>
+    <tr><td><strong>SMEs</strong></td><td>Deploy a focused standard edition without the cost of a full GRC program.</td></tr>
+    <tr><td><strong>Audit consultants</strong></td><td>Deliver repeatable audit workflows on a client’s Odoo stack.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="compare">Standard Edition in context</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr><th scope="col">Topic</th><th scope="col">RWPST AuditFlow Standard</th><th scope="col">Full certified GRC</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">Core promise</th><td>Practical internal audit workflow and KPIs inside Odoo.</td><td>End-to-end governance, risk, and compliance with deeper certifications.</td></tr>
+    <tr><th scope="row">Deployment</th><td>Odoo app install; business-led rollout.</td><td>Enterprise program with dedicated GRC operations.</td></tr>
+    <tr><th scope="row">Best when</th><td>You need structure, follow-up, and visibility quickly.</td><td>You need regulatory-grade control libraries and enterprise risk taxonomy.</td></tr>
+  </tbody>
+</table>
+
+<h2>Before you buy</h2>
+
+<p>Review the demo video and screenshots before installing.</p>
+
+<p>Confirm the standard edition scope: engagements, findings, readiness checks, and executive KPIs.</p>
+
+<p>Use a staging database first, then roll out to production after validating your process and access rules.</p>
+
+<p>Contact the publisher through Odoo Apps if you need implementation support or customization.</p>
+
+<h2 id="faqs">Questions teams ask</h2>
+
+<h3>Is this a complete GRC platform?</h3>
+<p>No. RWPST AuditFlow Standard Edition is designed for internal audit workflow, findings follow-up, readiness checks, and operational KPIs inside Odoo.</p>
+
+<h3>Can we use it in production?</h3>
+<p>Yes. Plan the rollout like any business application: validate your process, access rules, translation needs, and training.</p>
+
+<h3>What about Arabic and localization?</h3>
+<p>The module ships with translation support for Arabic and English. Language behavior should be validated during implementation like any other localized Odoo deployment.</p>
+
+<h3>How can a buyer request a guided walkthrough?</h3>
+<p>Use the publisher contact information on the Odoo Apps listing. This keeps support and pre-sale communication inside the approved marketplace flow.</p>
+
+<h2 id="support">Support and feedback</h2>
+
+<p>Use the publisher contact information shown on the Odoo Apps listing or in the app manifest for support, customization, and upgrade questions.</p>
+
+<p>RWPST AuditFlow · Internal audit management for Odoo</p>
+
+</body>
+</html>

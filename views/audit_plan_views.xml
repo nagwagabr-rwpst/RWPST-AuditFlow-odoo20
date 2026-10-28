@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_audit_plan_tree" model="ir.ui.view">
+            <field name="name">audit.plan.stable.list</field>
+            <field name="model">audit.plan.stable</field>
+            <field name="arch" type="xml">
+                <list string="Audit Plans" class="o_auditflow_list"
+                      decoration-info="state == 'draft'"
+                      decoration-success="state == 'done'"
+                      decoration-muted="state == 'cancel'">
+                    <field name="name"/>
+                    <field name="client_id"/>
+                    <field name="lead_auditor_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="progress" widget="progressbar"/>
+                    <field name="state" widget="badge"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_audit_plan_form" model="ir.ui.view">
+            <field name="name">audit.plan.stable.form</field>
+            <field name="model">audit.plan.stable</field>
+            <field name="arch" type="xml">
+                <form class="o_auditflow_form">
+                    <header>
+                        <button name="action_open" type="object" string="Start"
+                                class="oe_highlight" invisible="state != 'draft'"/>
+                        <button name="action_done" type="object" string="Mark Done"
+                                class="oe_highlight" invisible="state != 'open'"/>
+                        <button name="action_set_draft" type="object" string="Reset to Draft"
+                                invisible="state not in ('done','cancel')"/>
+                        <button name="action_cancel" type="object" string="Cancel"
+                                invisible="state in ('cancel','done')"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,open,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_tasks" type="object"
+                                    class="oe_stat_button" icon="fa-tasks"
+                                    string="Tasks"/>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" string="Reference"/>
+                            <h1>
+                                <field name="name" readonly="state != 'draft'"
+                                       placeholder="e.g. AUD/2026/0001"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="client_id"/>
+                                <field name="lead_auditor_id"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name="progress" widget="progressbar"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Scope &amp; Objectives" name="scope">
+                                <field name="description"/>
+                            </page>
+                            <page string="Tasks" name="tasks">
+                                <field name="task_ids">
+                                    <list editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="name"/>
+                                        <field name="assigned_to"/>
+                                        <field name="status"/>
+                                        <field name="due_date"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Indicators" name="indicators">
+                                <field name="indicator_ids">
+                                    <list editable="bottom">
+                                        <field name="name"/>
+                                        <field name="category"/>
+                                        <field name="current_value"/>
+                                        <field name="target"/>
+                                        <field name="score" widget="progressbar"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        
+    </data>
+</odoo>

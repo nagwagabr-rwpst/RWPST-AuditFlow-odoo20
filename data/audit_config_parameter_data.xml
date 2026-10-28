@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="config_param_due_soon_days" model="ir.config_parameter">
+            <field name="key">fine_tech_smart_audit.due_soon_days</field>
+            <field name="value">7</field>
+        </record>
+    </data>
+</odoo>

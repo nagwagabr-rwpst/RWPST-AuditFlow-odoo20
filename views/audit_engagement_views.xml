@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_audit_engagement_tree" model="ir.ui.view">
+            <field name="name">audit.engagement.list</field>
+            <field name="model">audit.engagement</field>
+            <field name="arch" type="xml">
+                <list string="Audit Operations" class="o_auditflow_list"
+                      decoration-muted="state == 'cancelled'">
+                    <field name="name"/>
+                    <field name="auditee_id"/>
+                    <field name="lead_auditor_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="report_ready"/>
+                    <field name="state" widget="badge"
+                           decoration-info="state in ('draft', 'fieldwork')"
+                           decoration-warning="state == 'reporting'"
+                           decoration-success="state in ('issued', 'closed')"
+                           decoration-muted="state == 'cancelled'"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_audit_engagement_search" model="ir.ui.view">
+            <field name="name">audit.engagement.search</field>
+            <field name="model">audit.engagement</field>
+            <field name="arch" type="xml">
+                <search string="Audit Operations">
+                    <field name="name"/>
+                    <field name="auditee_id"/>
+                    <field name="lead_auditor_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_audit_engagement_form" model="ir.ui.view">
+            <field name="name">audit.engagement.form</field>
+            <field name="model">audit.engagement</field>
+            <field name="arch" type="xml">
+                <form class="o_auditflow_form">
+                    <field name="not_ready_flag_count" invisible="1"/>
+                    <field name="report_ready" invisible="1"/>
+                    <header>
+                        <button name="action_start_fieldwork" type="object"
+                                string="Start Fieldwork" class="btn-primary"
+                                invisible="state != 'draft'"/>
+                        <button name="action_move_to_reporting" type="object"
+                                string="Move to Reporting" class="btn-primary"
+                                invisible="state != 'fieldwork'"/>
+                        <button name="action_issue_report" type="object"
+                                string="Issue Report" class="btn-primary"
+                                invisible="state != 'reporting'"/>
+                        <button name="action_close" type="object"
+                                string="Close" class="btn-primary"
+                                invisible="state != 'issued'"/>
+                        <button name="action_cancel" type="object"
+                                string="Cancel" class="btn-secondary"
+                                invisible="state == 'cancelled'"/>
+                        <button name="action_set_to_draft" type="object"
+                                string="Reset to Draft" class="btn-secondary"
+                                invisible="state == 'draft'"/>
+                        <button name="action_check_report_readiness" type="object"
+                                string="Check report readiness" class="btn-secondary"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object"
+                                    name="action_view_corrective_actions"
+                                    class="oe_stat_button"
+                                    icon="fa-wrench">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="corrective_action_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Corrective Actions (CAPA)</span>
+                                </div>
+                            </button>
+                            <button type="object"
+                                    name="action_view_open_corrective_actions"
+                                    class="oe_stat_button"
+                                    icon="fa-folder-open">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="open_corrective_action_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Open Actions</span>
+                                </div>
+                            </button>
+                            <button type="object"
+                                    name="action_view_overdue_corrective_actions"
+                                    class="oe_stat_button"
+                                    icon="fa-exclamation-triangle">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="overdue_corrective_action_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Delayed Actions</span>
+                                </div>
+                            </button>
+                            <button type="object"
+                                    name="action_check_report_readiness"
+                                    class="oe_stat_button"
+                                    icon="fa-exclamation-circle"
+                                    string="Not Ready"
+                                    invisible="report_ready"/>
+                            <button type="object"
+                                    name="action_view_findings"
+                                    class="oe_stat_button"
+                                    icon="fa-bug"
+                                    string="Review Results"/>
+                            <button type="object"
+                                    name="action_view_overdue_findings"
+                                    class="oe_stat_button"
+                                    icon="fa-exclamation-triangle"
+                                    string="Delayed Review Results"/>
+                            <button type="object"
+                                    name="action_view_findings"
+                                    class="oe_stat_button"
+                                    icon="fa-folder-open"
+                                    string="Open"
+                                    context="{'search_default_group_by_status': 1}"/>
+                            <button type="object"
+                                    name="action_view_findings"
+                                    class="oe_stat_button"
+                                    icon="fa-warning"
+                                    string="High Risk"
+                                    context="{'search_default_filter_critical_findings': 1}"/>
+                            <button type="object"
+                                    name="action_view_findings"
+                                    class="oe_stat_button"
+                                    icon="fa-check"
+                                    string="Closed"/>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" string="Reference"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <div class="o_audit_readiness_panel is-pending" invisible="report_ready">
+                            <div class="o_audit_readiness_head">
+                                <span class="o_audit_readiness_kicker">Report readiness</span>
+                                <span class="o_audit_readiness_pill">Not Ready</span>
+                            </div>
+                            <field name="report_readiness_message" nolabel="1" readonly="1"/>
+                        </div>
+                        <div class="o_audit_readiness_panel is-ready" invisible="not report_ready">
+                            <div class="o_audit_readiness_head">
+                                <span class="o_audit_readiness_kicker">Report readiness</span>
+                                <span class="o_audit_readiness_pill">Ready</span>
+                            </div>
+                            <field name="report_readiness_message" nolabel="1" readonly="1"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="auditee_id"/>
+                                <field name="auditor_ids" widget="many2many_tags"/>
+                                <field name="lead_auditor_id"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Review scope &amp; objectives" name="scope_objectives">
+                                <group>
+                                    <field name="scope" nolabel="1" placeholder="Review scope..."/>
+                                </group>
+                                <group>
+                                    <field name="objectives" nolabel="1" placeholder="Review objectives..."/>
+                                </group>
+                            </page>
+                            <page string="Review Results" name="findings">
+                                <field name="finding_ids">
+                                    <list editable="bottom"
+                                          class="o_auditflow_list"
+                                          default_order="due_date desc, id desc"
+                                          decoration-success="status == 'closed' or status == 'done'"
+                                          decoration-muted="status == 'cancelled'"
+                                          decoration-danger="is_overdue"
+                                          decoration-warning="is_due_soon and not is_overdue">
+                                        <field name="name"/>
+                                        <field name="severity" widget="badge"
+                                               decoration-danger="severity == 'critical'"
+                                               decoration-warning="severity == 'high'"
+                                               decoration-info="severity == 'medium'"
+                                               decoration-muted="severity == 'low'"/>
+                                        <field name="status" widget="badge"
+                                               decoration-info="status == 'open'"
+                                               decoration-warning="status == 'in_review'"
+                                               decoration-success="status in ('closed', 'done')"
+                                               decoration-muted="status == 'cancelled'"/>
+                                        <field name="corrective_status" optional="show"/>
+                                        <field name="open_action_count" optional="show"/>
+                                        <field name="overdue_action_count" optional="show"/>
+                                        <field name="risk_rating" optional="show"/>
+                                        <field name="owner_id"/>
+                                        <field name="responsible_id" optional="hide"/>
+                                        <field name="due_date"/>
+                                        <field name="target_date" optional="hide"/>
+                                        <field name="is_overdue" invisible="1"/>
+                                        <field name="is_due_soon" invisible="1"/>
+                                        <field name="color" column_invisible="1"/>
+                                    </list>
+                                    <form class="o_auditflow_form">
+                                        <sheet>
+                                            <div class="oe_title">
+                                                <label for="name" string="Review Result"/>
+                                                <h1>
+                                                    <field name="name" placeholder="e.g. Missing approval on journal entries"/>
+                                                </h1>
+                                            </div>
+                                            <group>
+                                                <group>
+                                                    <field name="severity"/>
+                                                    <field name="status"/>
+                                                </group>
+                                                <group>
+                                                    <field name="owner_id"/>
+                                                    <field name="due_date"/>
+                                                    <field name="is_overdue" invisible="1"/>
+                                                    <field name="is_due_soon" invisible="1"/>
+                                                </group>
+                                            </group>
+                                            <group string="Inherent risk" colspan="2">
+                                                <field name="risk_impact"/>
+                                                <field name="risk_likelihood"/>
+                                                <field name="risk_rating" readonly="1"/>
+                                            </group>
+                                            <notebook>
+                                                <page string="Action plan &amp; response" name="action_response">
+                                                    <group>
+                                                        <field name="action_plan" placeholder="Planned remediation..."/>
+                                                        <field name="target_date"/>
+                                                        <field name="responsible_id"/>
+                                                    </group>
+                                                    <group string="Management response">
+                                                        <field name="management_response" nolabel="1"/>
+                                                    </group>
+                                                </page>
+                                                <page string="Description" name="description">
+                                                    <field name="description" nolabel="1"
+                                                           placeholder="Describe the review result..."/>
+                                                </page>
+                                                <page string="Root Cause &amp; Impact" name="root_cause_impact">
+                                                    <group>
+                                                        <field name="root_cause" nolabel="1"
+                                                               placeholder="Root cause analysis..."/>
+                                                    </group>
+                                                    <group>
+                                                        <field name="impact" nolabel="1"
+                                                               placeholder="Business impact..."/>
+                                                    </group>
+                                                </page>
+                                                <page string="Recommendation" name="recommendation">
+                                                    <field name="recommendation" nolabel="1"
+                                                           placeholder="Recommended corrective action..."/>
+                                                </page>
+                                                <page string="Evidence" name="evidence">
+                                                    <field name="attachment_ids" widget="many2many_binary"/>
+                                                </page>
+                                            </notebook>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Corrective Actions (CAPA)" name="corrective_actions">
+                                <field name="corrective_action_ids" readonly="1">
+                                    <list class="o_auditflow_list"
+                                          default_order="target_date asc, id desc"
+                                          decoration-danger="is_overdue"
+                                          decoration-success="state == 'done'"
+                                          decoration-warning="state == 'in_progress'">
+                                        <field name="name"/>
+                                        <field name="finding_id"/>
+                                        <field name="action_owner_id" widget="many2one_avatar"/>
+                                        <field name="target_date"/>
+                                        <field name="state" widget="badge"
+                                               decoration-danger="is_overdue and state not in ('done', 'cancelled')"
+                                               decoration-muted="state in ('draft', 'cancelled')"
+                                               decoration-info="state == 'assigned'"
+                                               decoration-warning="state == 'in_progress'"
+                                               decoration-success="state == 'done'"/>
+                                        <field name="is_overdue"/>
+                                        <field name="days_overdue" optional="show"/>
+                                        <field name="priority" optional="show"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <menuitem id="menu_smart_audit_engagements"
+                  name="All Audit Operations"
+                  parent="menu_smart_audit_section_engagements"
+                  action="action_audit_engagement"
+                  sequence="5"/>
+
+        <record id="action_audit_engagement" model="ir.actions.act_window">
+            <field name="search_view_id" ref="view_audit_engagement_search"/>
+        </record>
+
+    </data>
+</odoo>

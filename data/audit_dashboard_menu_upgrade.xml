@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Upgrade-safe: Internal Audit app root opens Executive Dashboard (OWL client action).
+
+        Loaded after views/audit_dashboard_views.xml so auditflow_dashboard_action exists.
+
+        Legacy Audit Control Center (menu_audit_control_center, action_audit_dashboard_kpi) stays in the
+        database for the KPI model/form; visibility is controlled only in audit_dashboard_kpi_views.xml
+        (menuitem active=False). On module upgrade, that menuitem definition reapplies.
+
+        Run on every module update via manifest (standard -u behavior).
+    -->
+    <data>
+        <!-- menu_audit_control_center: single definition in audit_dashboard_kpi_views.xml (active=False). -->
+        <record id="menu_smart_audit_root" model="ir.ui.menu">
+            <field name="action" ref="auditflow_dashboard_action"/>
+        </record>
+    </data>
+</odoo>

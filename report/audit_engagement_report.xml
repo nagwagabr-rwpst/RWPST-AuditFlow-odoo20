@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_audit_engagement" model="ir.actions.report">
+            <field name="name">Audit Report</field>
+            <field name="model">audit.engagement</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">auditflow_standard.report_audit_engagement_document</field>
+            <field name="print_report_name">'Audit operation - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_audit_engagement"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

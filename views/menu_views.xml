@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Actions: action_audit_dashboard is in views/dashboard_views.xml (requires view first). -->
+
+        <record id="action_audit_plan" model="ir.actions.act_window">
+            <field name="name">Audit Plans</field>
+            <field name="res_model">audit.plan.stable</field>
+            <field name="view_mode">list,form</field>
+
+        </record>
+
+        <record id="action_audit_task" model="ir.actions.act_window">
+            <field name="name">Audit Tasks</field>
+            <field name="res_model">audit.task.stable</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_audit_engagement" model="ir.actions.act_window">
+            <field name="name">All Audit Operations</field>
+            <field name="res_model">audit.engagement</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Top-level: Internal Audit + Dashboard, Audit Operations, Review results, Analytics, Audit Management -->
+        <menuitem id="menu_smart_audit_root"
+                  name="Internal Audit"
+                  web_icon="auditflow_standard,static/description/icon.png"
+                  sequence="10"/>
+        <menuitem id="menu_smart_audit_section_dashboard"
+                  name="Dashboard"
+                  parent="menu_smart_audit_root"
+                  sequence="1"/>
+        <menuitem id="menu_smart_audit_section_engagements"
+                  name="Audit Operations"
+                  parent="menu_smart_audit_root"
+                  sequence="10"/>
+        <menuitem id="menu_smart_audit_section_findings"
+                  name="Review Results"
+                  parent="menu_smart_audit_root"
+                  sequence="20"/>
+        <menuitem id="menu_smart_audit_section_capa"
+                  name="Corrective Actions (CAPA)"
+                  parent="menu_smart_audit_root"
+                  sequence="22"/>
+        <menuitem id="menu_smart_audit_section_analytics"
+                  name="Analytics"
+                  parent="menu_smart_audit_root"
+                  sequence="30"/>
+        <!-- Workplan / legacy KPI shell: see dashboard and KPI views; hidden legacy menu entries. -->
+        <menuitem id="menu_smart_audit_ops"
+                  name="Audit Management"
+                  parent="menu_smart_audit_root"
+                  sequence="40"/>
+
+        <menuitem id="menu_smart_audit_plans"
+                  name="Audit Plans"
+                  parent="menu_smart_audit_ops"
+                  action="action_audit_plan"
+                  sequence="10"/>
+
+        <menuitem id="menu_smart_audit_tasks"
+                  name="Tasks"
+                  parent="menu_smart_audit_ops"
+                  action="action_audit_task"
+                  sequence="20"/>
+
+        <menuitem id="menu_smart_audit_indicators"
+                  name="Indicators"
+                  parent="menu_smart_audit_ops"
+                  action="action_audit_indicator"
+                  sequence="30"/>
+
+        <menuitem id="menu_audit_capa_all"
+                  name="All Corrective Actions (CAPA)"
+                  parent="menu_smart_audit_section_capa"
+                  action="action_audit_corrective_action"
+                  sequence="5"/>
+        <menuitem id="menu_audit_capa_my"
+                  name="My Corrective Actions (CAPA)"
+                  parent="menu_smart_audit_section_capa"
+                  action="action_audit_corrective_action_my"
+                  sequence="10"/>
+        <menuitem id="menu_audit_capa_overdue"
+                  name="Delayed Corrective Actions (CAPA)"
+                  parent="menu_smart_audit_section_capa"
+                  action="action_audit_corrective_action_overdue"
+                  sequence="20"/>
+        <menuitem id="menu_audit_capa_completed"
+                  name="Completed Corrective Actions (CAPA)"
+                  parent="menu_smart_audit_section_capa"
+                  action="action_audit_corrective_action_completed"
+                  sequence="30"/>
+
+        <!-- App root landing action: Executive Dashboard (ir.actions.client) is set in
+             data/audit_dashboard_menu_upgrade.xml after auditflow_dashboard_action exists. -->
+
+    </data>
+</odoo>

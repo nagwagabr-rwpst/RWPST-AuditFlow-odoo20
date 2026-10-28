@@ -1,0 +1,643 @@
+/* AuditFlow Executive Dashboard — scoped under .o_audit_dashboard only */
+
+.o_audit_dashboard.o_audit_dashboard_container {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 28px 32px 40px;
+    color: #0f172a;
+    text-align: start;
+}
+.o_audit_dashboard .o_audit_dashboard_header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 22px 24px;
+    border: 0;
+    border-radius: 18px;
+    background: linear-gradient(110deg, #0f172a 0%, #1e3a8a 48%, #2563eb 100%);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+.o_audit_dashboard .o_audit_dashboard_title {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+}
+.o_audit_dashboard .o_audit_dashboard_subtitle {
+    margin: 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.84);
+}
+.o_audit_dashboard .o_audit_dashboard_badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.o_audit_dashboard .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+.o_audit_dashboard .btn-primary:hover,
+.o_audit_dashboard .btn-primary:focus {
+    background-color: #1e3a8a;
+    border-color: #1e3a8a;
+    color: #ffffff;
+}
+.o_audit_dashboard .o_audit_dashboard_loading,
+.o_audit_dashboard .o_audit_dashboard_error,
+.o_audit_dashboard .o_audit_chart_loading,
+.o_audit_dashboard .o_audit_chart_empty {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+.o_audit_dashboard .o_audit_filter_bar {
+    margin-bottom: 22px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+.o_audit_dashboard .o_audit_filter_bar_inner {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr)) auto;
+    gap: 12px;
+    align-items: end;
+}
+.o_audit_dashboard .o_audit_filter_group {
+    min-width: 0;
+}
+.o_audit_dashboard .o_audit_filter_label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+}
+.o_audit_dashboard .o_audit_filter_select {
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #0f172a;
+}
+.o_audit_dashboard .o_audit_filter_actions {
+    display: flex;
+    justify-content: flex-end;
+}
+.o_audit_dashboard .o_audit_refresh_button {
+    min-height: 38px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.o_audit_dashboard .o_audit_filter_hint {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #64748b;
+}
+.o_audit_dashboard .o_audit_refresh_banner {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 600;
+}
+.o_audit_dashboard .o_audit_dashboard_refreshing {
+    opacity: 0.55;
+    pointer-events: none;
+}
+.o_audit_dashboard .o_audit_kpi_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+.o_audit_dashboard .o_audit_kpi_card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 104px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-inline-start-width: 4px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.o_audit_dashboard .o_audit_kpi_card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+}
+.o_audit_dashboard .o_audit_kpi_card.is-active {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16), 0 14px 32px rgba(15, 23, 42, 0.08);
+}
+.o_audit_dashboard .o_audit_kpi_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #1f2937;
+    background: #f8fafc;
+    flex-shrink: 0;
+}
+.o_audit_dashboard .o_audit_kpi_meta {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+.o_audit_dashboard .o_audit_kpi_label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+}
+.o_audit_dashboard .o_audit_kpi_value {
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 900;
+    color: #020617;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-primary {
+    border-inline-start-color: #2563eb;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-primary .o_audit_kpi_icon {
+    color: #2563eb;
+    background: #eff6ff;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-info {
+    border-inline-start-color: #1e3a8a;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-info .o_audit_kpi_icon {
+    color: #1e3a8a;
+    background: #e0e7ff;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-danger {
+    border-inline-start-color: #dc2626;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-danger .o_audit_kpi_icon {
+    color: #dc2626;
+    background: #fee2e2;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-warning {
+    border-inline-start-color: #f97316;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-warning .o_audit_kpi_icon {
+    color: #c2410c;
+    background: #ffedd5;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-success {
+    border-inline-start-color: #34d399;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-success .o_audit_kpi_icon {
+    color: #047857;
+    background: #d1fae5;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-dark {
+    border-inline-start-color: #0f172a;
+}
+.o_audit_dashboard .o_audit_kpi_card.tone-dark .o_audit_kpi_icon {
+    color: #0f172a;
+    background: #e2e8f0;
+}
+.o_audit_dashboard .o_audit_dashboard_main {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+.o_audit_dashboard .o_audit_chart_panel,
+.o_audit_dashboard .o_audit_insight_panel,
+.o_audit_dashboard .o_audit_powerbi_panel {
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+.o_audit_dashboard .o_audit_chart_panel {
+    padding: 22px 24px;
+    min-height: 360px;
+}
+.o_audit_dashboard .o_audit_chart_heading,
+.o_audit_dashboard .o_audit_insight_title,
+.o_audit_dashboard .o_audit_powerbi_title {
+    margin: 0 0 14px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+}
+.o_audit_dashboard .o_audit_chart_toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.o_audit_dashboard .o_audit_chart_toolbar_title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.o_audit_dashboard .o_audit_chart_type_badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.o_audit_dashboard .o_audit_chart_meta_line {
+    margin: 0 0 16px;
+    font-size: 13px;
+}
+.o_audit_dashboard .o_audit_chart_error {
+    margin-top: 10px;
+}
+.o_audit_dashboard .o_audit_chart_body {
+    margin-top: 18px;
+}
+.o_audit_dashboard .o_audit_bar_chart {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.o_audit_dashboard .o_audit_bar_row {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) minmax(0, 1fr) 46px;
+    gap: 12px;
+    align-items: center;
+}
+.o_audit_dashboard .o_audit_bar_label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+}
+.o_audit_dashboard .o_audit_bar_track {
+    height: 12px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e2e8f0;
+}
+.o_audit_dashboard .o_audit_bar_fill {
+    height: 100%;
+    min-width: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+}
+.o_audit_dashboard .o_audit_bar_value {
+    text-align: end;
+    font-size: 13px;
+    font-weight: 800;
+    color: #0f172a;
+    font-variant-numeric: tabular-nums;
+}
+.o_audit_dashboard .o_audit_line_chart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+}
+.o_audit_dashboard .o_audit_line_point {
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    text-align: center;
+}
+.o_audit_dashboard .o_audit_line_value {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 24px;
+    font-weight: 900;
+    color: #0f172a;
+}
+.o_audit_dashboard .o_audit_line_chip {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 4px auto;
+    border-radius: 50%;
+    background: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+.o_audit_dashboard .o_audit_line_label {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+}
+.o_audit_dashboard .o_audit_donut_chart {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+}
+.o_audit_dashboard .o_audit_donut_visual {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: conic-gradient(#0f172a 0deg, #1e3a8a 140deg, #2563eb 250deg, #34d399 360deg);
+    justify-self: center;
+}
+.o_audit_dashboard .o_audit_donut_center {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+.o_audit_dashboard .o_audit_donut_center strong,
+.o_audit_dashboard .o_audit_donut_total {
+    display: block;
+    font-size: 28px;
+    font-weight: 900;
+    color: #0f172a;
+}
+.o_audit_dashboard .o_audit_donut_center span,
+.o_audit_dashboard .o_audit_donut_total_label {
+    font-size: 12px;
+    color: #64748b;
+}
+.o_audit_dashboard .o_audit_donut_legend {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.o_audit_dashboard .o_audit_donut_legend_row {
+    display: grid;
+    grid-template-columns: 12px minmax(0, 1fr) auto auto;
+    gap: 10px;
+    align-items: center;
+}
+.o_audit_dashboard .o_audit_donut_swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #2563eb;
+}
+.o_audit_dashboard .o_audit_donut_label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #334155;
+}
+.o_audit_dashboard .o_audit_donut_legend_value {
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+.o_audit_dashboard .o_audit_donut_pct {
+    font-size: 12px;
+    color: #64748b;
+}
+.o_audit_dashboard .o_audit_donut_legend_item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.o_audit_dashboard .o_audit_donut_mini_track {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e2e8f0;
+}
+.o_audit_dashboard .o_audit_donut_mini_fill {
+    height: 100%;
+    min-width: 4px;
+    border-radius: 999px;
+    background: #2563eb;
+}
+.o_audit_dashboard .o_audit_dashboard_sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.o_audit_dashboard .o_audit_insight_panel,
+.o_audit_dashboard .o_audit_powerbi_panel {
+    padding: 22px;
+}
+.o_audit_dashboard .o_audit_insight_text,
+.o_audit_dashboard .o_audit_powerbi_text {
+    margin: 12px 0 0;
+    color: #64748b;
+    line-height: 1.55;
+}
+.o_audit_dashboard .o_audit_insight_metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 12px 0;
+}
+.o_audit_dashboard .o_audit_insight_metric {
+    padding: 12px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+.o_audit_dashboard .o_audit_insight_metric_label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+}
+.o_audit_dashboard .o_audit_insight_metric_value {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a;
+}
+.o_audit_dashboard .o_audit_powerbi_badge {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #ffedd5;
+    color: #c2410c;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.o_audit_dashboard .o_audit_powerbi_coming_soon {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 14px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 800;
+}
+@media (max-width: 1200px) {
+    .o_audit_dashboard .o_audit_kpi_grid {
+        grid-template-columns: repeat(3, minmax(160px, 1fr));
+    }
+    .o_audit_dashboard .o_audit_dashboard_main {
+        grid-template-columns: 1fr;
+    }
+    .o_audit_dashboard .o_audit_filter_bar_inner {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+@media (max-width: 768px) {
+    .o_audit_dashboard.o_audit_dashboard_container {
+        padding: 18px 14px 28px;
+    }
+    .o_audit_dashboard .o_audit_dashboard_header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .o_audit_dashboard .o_audit_kpi_grid {
+        grid-template-columns: 1fr;
+    }
+    .o_audit_dashboard .o_audit_filter_bar_inner {
+        grid-template-columns: 1fr;
+    }
+    .o_audit_dashboard .o_audit_filter_actions {
+        justify-content: stretch;
+    }
+    .o_audit_dashboard .o_audit_refresh_button {
+        width: 100%;
+    }
+    .o_audit_dashboard .o_audit_bar_row {
+        grid-template-columns: 1fr;
+    }
+    .o_audit_dashboard .o_audit_bar_value {
+        text-align: start;
+    }
+    .o_audit_dashboard .o_audit_donut_chart {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .o_audit_dashboard .o_audit_insight_metrics {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   SAFE RTL — DASHBOARD ONLY (scoped)
+========================================================= */
+
+body.o_rtl .o_audit_dashboard {
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+body.o_rtl .o_audit_dashboard .dashboard-header,
+body.o_rtl .o_audit_dashboard .o_audit_dashboard_header {
+    text-align: right;
+}
+
+body.o_rtl .o_audit_dashboard .dashboard-filters,
+body.o_rtl .o_audit_dashboard .audit-dashboard-filters,
+body.o_rtl .o_audit_dashboard .o_audit_filter_bar,
+body.o_rtl .o_audit_dashboard .o_audit_filter_bar_inner {
+    direction: rtl;
+}
+
+body.o_rtl .o_audit_dashboard .o_audit_filter_label,
+body.o_rtl .o_audit_dashboard .dashboard-filters label,
+body.o_rtl .o_audit_dashboard .audit-dashboard-filters label {
+    text-align: right;
+    display: block;
+}
+
+body.o_rtl .o_audit_dashboard .o_audit_filter_select {
+    direction: rtl;
+    text-align: right;
+}
+
+body.o_rtl .o_audit_dashboard .audit-kpi-card,
+body.o_rtl .o_audit_dashboard .dashboard-kpi-card,
+body.o_rtl .o_audit_dashboard .o_audit_kpi_card {
+    direction: rtl;
+    text-align: right;
+}
+
+body.o_rtl .o_audit_dashboard .o_audit_kpi_icon,
+body.o_rtl .o_audit_dashboard .audit-kpi-card i,
+body.o_rtl .o_audit_dashboard .dashboard-kpi-card i {
+    margin-inline-end: 8px;
+    margin-inline-start: 0;
+}
+
+body.o_rtl .o_audit_dashboard .chart-container,
+body.o_rtl .o_audit_dashboard .o_audit_chart_panel,
+body.o_rtl .o_audit_dashboard .o_audit_chart_body,
+body.o_rtl .o_audit_dashboard .o_audit_bar_chart,
+body.o_rtl .o_audit_dashboard .o_audit_bar_row,
+body.o_rtl .o_audit_dashboard .o_audit_line_chart,
+body.o_rtl .o_audit_dashboard .o_audit_donut_chart,
+body.o_rtl .o_audit_dashboard .o_audit_donut_legend,
+body.o_rtl .o_audit_dashboard .o_audit_dashboard_main,
+body.o_rtl .o_audit_dashboard .o_audit_dashboard_sidebar {
+    direction: rtl;
+}
+
+body.o_rtl .o_audit_dashboard .o_audit_dashboard_title,
+body.o_rtl .o_audit_dashboard .o_audit_dashboard_subtitle {
+    text-align: right;
+}
+
+body.o_rtl .o_audit_dashboard .o_audit_dashboard_header_text,
+body.o_rtl .o_audit_dashboard .o_audit_filter_hint,
+body.o_rtl .o_audit_dashboard .o_audit_kpi_meta,
+body.o_rtl .o_audit_dashboard .o_audit_chart_heading,
+body.o_rtl .o_audit_dashboard .o_audit_insight_title,
+body.o_rtl .o_audit_dashboard .o_audit_insight_text,
+body.o_rtl .o_audit_dashboard .o_audit_powerbi_title,
+body.o_rtl .o_audit_dashboard .o_audit_powerbi_text {
+    text-align: right;
+}
+
+body.o_rtl .o_audit_dashboard .o_audit_bar_fill {
+    margin-inline-start: auto;
+    background: linear-gradient(270deg, #1e3a8a, #2563eb);
+}
+
+body.o_rtl .o_audit_dashboard .o_audit_bar_value {
+    text-align: end;
+}
