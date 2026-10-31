@@ -1,8 +1,8 @@
 {
-    'name': 'RWPST AuditFlow Standard',
-    'version': '20.0.4.1.0',
+    'name': 'AuditFlow Standard',
+    'version': '20.0.4.1.1',
     'summary': (
-        'Version 1 Standard: internal audit operations, findings, report readiness, '
+        'Odoo 20: internal audit operations, findings, report readiness, '
         'overdue visibility, executive dashboard — English and Arabic.'
     ),
     'description': """
@@ -20,7 +20,7 @@ RWPST AuditFlow — Internal Audit (Version 1 Standard)
 
 **Scope**
 
-Internal audit management for Odoo focused on audit operations, findings, action and
+Internal audit management for Odoo 20, focused on audit operations, findings, action and
 report readiness, overdue visibility, and dashboards. **Not** a full certified GRC suite.
 
 **Technical**
